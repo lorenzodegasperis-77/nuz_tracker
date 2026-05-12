@@ -193,9 +193,120 @@ label{font-size:11px;color:var(--t2);margin-bottom:4px;display:block;font-weight
 .warn-box{background:#fffbeb;border:1.5px solid #fde68a;border-radius:var(--r1);padding:8px 12px;font-size:12px;color:#92400e;margin-bottom:12px;font-weight:600}
 .dark .warn-box{background:#2a1a05;border-color:#8c6a1a;color:#fcd34d}
 
+
+/* ═══ MOBILE ═══ */
+@media (max-width: 768px) {
+  .home{padding:20px 16px}
+  .home-hdr{flex-direction:column;align-items:stretch;margin-bottom:28px}
+  .home-logo{font-size:1.8rem}
+  .runs-grid{grid-template-columns:1fr}
+  .nav{padding:0 12px;height:52px;gap:0}
+  .nav-logo{font-size:.9rem;margin-right:8px}
+  .nav-tab{padding:0 8px;font-size:10px;gap:4px;height:52px}
+  .nav-tab svg{width:11px;height:11px}
+  .nav-r{gap:4px}
+  .run-chip{display:none}
+  .stabs{padding:10px 16px 0;overflow-x:auto}
+  .content{padding:14px 16px}
+  .sh{gap:6px}
+  .pgrid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .pc{padding:12px 10px}
+  .psprite,.psprite-ph{width:64px;height:64px}
+  .ggrid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .gc{padding:10px}
+  .rrow{flex-direction:column;align-items:flex-start;gap:8px;padding:10px 12px}
+  .rname{min-width:auto;width:100%}
+  .rbtns{flex-wrap:wrap;width:100%}
+  .rpoke{width:100%;padding-top:4px;border-top:1px solid var(--bg)}
+  .gymgrid{grid-template-columns:1fr}
+  .gym-slots{grid-template-columns:1fr 1fr}
+  .type-tbl{font-size:10px}
+  .type-tbl th:first-child{min-width:60px}
+  .ec2{width:32px;height:22px;font-size:9px}
+  .cov-grid{grid-template-columns:repeat(3,1fr)}
+  .mvgrid{grid-template-columns:1fr}
+  .fr{grid-template-columns:1fr}
+  .mb{padding:18px 16px}
+  .mb.wide{max-width:100%}
+  .pprev{flex-direction:column;align-items:flex-start;gap:6px}
+  .pprev img{width:64px;height:64px}
+  .setup-card{padding:24px 20px}
+  .leg{gap:6px;font-size:10px}
+  .an-ttl{font-size:.65rem}
+}
+@media (max-width: 480px) {
+  .pgrid{grid-template-columns:1fr}
+  .gym-slots{grid-template-columns:1fr}
+  .cov-grid{grid-template-columns:repeat(2,1fr)}
+}
+
 /* SETUP */
 .setup-card{background:var(--card);padding:32px;border-radius:var(--r3);box-shadow:var(--sh2);max-width:480px;width:100%;text-align:center}
 .setup-row{text-align:left;display:flex;flex-direction:column;gap:16px;margin-bottom:24px}
+
+.nav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 10px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    border-bottom: 1px solid var(--bd);
+    background: var(--card);
+}
+.nav::-webkit-scrollbar { display: none; }
+.nav button { flex: 0 0 auto; }
+
+/* Stile per Incontri Completati */
+.area-completed {
+    opacity: 0.6;
+    filter: grayscale(0.5);
+    background: #f9f9f9 !important;
+}
+
+/* Bottone Team Boss */
+.boss-team-btn {
+    background: none;
+    border: 2px solid var(--bd);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 0;
+}
+.boss-team-btn.enabled {
+    border-color: var(--red);
+    background: var(--redl);
+}
+.boss-team-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Filtri Incontri */
+.encounter-filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Bottoni Import/Export */
+.system-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px dashed var(--bd);
+}
+
+
+
+
 </style>
 </head>
 <body>
