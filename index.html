@@ -31,7 +31,8 @@ label{font-size:11px;color:var(--t2);margin-bottom:4px;display:block;font-weight
 .fg{margin-bottom:13px}.fr{display:grid;grid-template-columns:1fr 1fr;gap:11px}
 
 /* NAV */
-.nav{background:var(--card);border-bottom:1px solid var(--bd);padding:0 24px;display:flex;align-items:center;height:58px;position:sticky;top:0;z-index:100;box-shadow:var(--sh);gap:2px}
+.nav{background:var(--card);border-bottom:1px solid var(--bd);padding:0 12px 0 20px;display:flex;align-items:center;height:58px;position:sticky;top:0;z-index:100;box-shadow:var(--sh);gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
 .nav-logo{font-size:1.05rem;font-weight:900;color:var(--red);letter-spacing:-.02em;margin-right:14px;white-space:nowrap}
 .nav-logo em{color:var(--text);font-style:normal}
 .nav-tab{height:58px;padding:0 14px;display:flex;align-items:center;gap:6px;font-weight:800;font-size:12px;color:var(--t2);background:transparent;border:none;cursor:pointer;border-bottom:3px solid transparent;transition:all .15s;white-space:nowrap;letter-spacing:.02em}
@@ -200,11 +201,11 @@ label{font-size:11px;color:var(--t2);margin-bottom:4px;display:block;font-weight
   .home-hdr{flex-direction:column;align-items:stretch;margin-bottom:28px}
   .home-logo{font-size:1.8rem}
   .runs-grid{grid-template-columns:1fr}
-  .nav{padding:0 12px;height:52px;gap:0}
-  .nav-logo{font-size:.9rem;margin-right:8px}
-  .nav-tab{padding:0 8px;font-size:10px;gap:4px;height:52px}
+  .nav{padding:0 8px;height:52px;gap:0}
+  .nav-logo{font-size:.9rem;margin-right:6px;flex-shrink:0}
+  .nav-tab{padding:0 8px;font-size:10px;gap:3px;height:52px;flex-shrink:0}
   .nav-tab svg{width:11px;height:11px}
-  .nav-r{gap:4px}
+  .nav-r{gap:4px;flex-shrink:0}
   .run-chip{display:none}
   .stabs{padding:10px 16px 0;overflow-x:auto}
   .content{padding:14px 16px}
@@ -244,65 +245,95 @@ label{font-size:11px;color:var(--t2);margin-bottom:4px;display:block;font-weight
 .setup-card{background:var(--card);padding:32px;border-radius:var(--r3);box-shadow:var(--sh2);max-width:480px;width:100%;text-align:center}
 .setup-row{text-align:left;display:flex;flex-direction:column;gap:16px;margin-bottom:24px}
 
-.nav {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    padding: 10px;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    border-bottom: 1px solid var(--bd);
-    background: var(--card);
-}
-.nav::-webkit-scrollbar { display: none; }
-.nav button { flex: 0 0 auto; }
+.nav button{flex:0 0 auto}
 
-/* Stile per Incontri Completati */
-.area-completed {
-    opacity: 0.6;
-    filter: grayscale(0.5);
-    background: #f9f9f9 !important;
-}
+/* ══ NAV LIGHT THEME ══ */
+body:not(.dark) .nav{background:#e3350d}
+body:not(.dark) .nav-logo{color:#fff}
+body:not(.dark) .nav-logo em{color:rgba(255,255,255,.6)}
+body:not(.dark) .nav-tab{color:rgba(255,255,255,.75)}
+body:not(.dark) .nav-tab:hover{color:#fff;background:rgba(255,255,255,.15)}
+body:not(.dark) .nav-tab.on{color:#fff;border-bottom-color:#fff;background:rgba(255,255,255,.2)}
+body:not(.dark) .nav-r .btn-i{color:#fff}
+body:not(.dark) .run-chip{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.15);color:#fff}
+body:not(.dark) .nav-r .btn-o{border-color:rgba(255,255,255,.55);color:#fff}
+body:not(.dark) .nav-r .btn-o:hover{background:rgba(255,255,255,.2)}
+
+/* ══ ANALYSIS DEFENSE CARDS ══ */
+.def-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-bottom:4px}
+.def-card{background:var(--bg);border-radius:var(--r2);padding:12px;border:1.5px solid var(--bd)}
+.def-card-hdr{display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--bd)}
+.def-thumb{width:48px;height:48px;object-fit:contain;image-rendering:pixelated;flex-shrink:0}
+.def-pname{font-weight:900;font-size:.85rem;line-height:1.2}
+.def-types{display:flex;flex-wrap:wrap;gap:2px;margin-top:3px}
+.def-row{display:flex;align-items:center;flex-wrap:wrap;gap:3px;margin-bottom:4px}
+.def-mult{display:inline-flex;align-items:center;justify-content:center;width:28px;height:18px;border-radius:4px;font-size:10px;font-weight:900;flex-shrink:0;font-family:var(--mf)}
+.def-mult.x4{background:#7f1d1d;color:#fca5a5}
+.def-mult.x2{background:#dc2626;color:#fff}
+.def-mult.x0{background:#1e40af;color:#bfdbfe}
+.def-mult.x05{background:#166534;color:#86efac}
+.def-mult.x025{background:#14532d;color:#4ade80}
+.def-none{font-size:11px;color:var(--t3);font-style:italic}
+
+/* Team weakness summary row */
+.def-summary{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.def-sum-item{display:flex;align-items:center;gap:3px;padding:3px 6px;border-radius:6px;font-size:10px;font-weight:800}
+.def-sum-item.danger{background:#fee2e2;color:#991b1b}
+.dark .def-sum-item.danger{background:#450a0a;color:#fca5a5}
+.def-sum-item.warning{background:#fef3c7;color:#92400e}
+.dark .def-sum-item.warning{background:#2d1a00;color:#fde68a}
+.def-sum-item.immune{background:#dbeafe;color:#1e40af}
+.dark .def-sum-item.immune{background:#0f172a;color:#93c5fd}
+
+/* ══ BOSS TEAM VIEW MODAL ══ */
+.btv-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--bd)}
+.btv-badge-circle{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.btv-leader-name{font-size:1.1rem;font-weight:900}
+.btv-leader-sub{font-size:11px;color:var(--t2);font-weight:600;margin-top:2px}
+.btv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.btv-poke{background:var(--bg);border-radius:var(--r2);padding:10px 8px;display:flex;flex-direction:column;align-items:center;gap:4px;border:1.5px solid var(--bd)}
+.btv-thumb{width:72px;height:72px;object-fit:contain;image-rendering:pixelated}
+.btv-thumb-ph{width:72px;height:72px;background:var(--bd);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--t3);font-size:24px}
+.btv-pname{font-weight:900;font-size:.78rem;text-align:center;line-height:1.2}
+.btv-lv{font-size:10px;color:var(--t3);font-family:var(--mf);font-weight:700}
+.btv-types{display:flex;flex-wrap:wrap;gap:2px;justify-content:center}
+.btv-moves{display:flex;flex-direction:column;gap:2px;width:100%;margin-top:2px}
+.btv-mv{font-size:9px;color:var(--t2);font-weight:700;background:var(--card);padding:2px 5px;border-radius:4px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border:1px solid var(--bd)}
+.rrow.enc-done{border-left:3px solid var(--green);opacity:.75}
+.rrow.enc-done .rname{text-decoration:line-through;text-decoration-color:var(--t3);color:var(--t2)}
+
+/* Route Filters */
+.route-filters{background:var(--card);border-radius:var(--r2);padding:10px 12px;margin-bottom:12px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:8px}
+.filter-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.filter-label{font-size:10px;font-weight:900;color:var(--t3);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;min-width:40px}
+.fchip{padding:3px 10px;border-radius:20px;font-size:10px;font-weight:800;border:1.5px solid var(--bd2);cursor:pointer;transition:all .15s;background:transparent;color:var(--t2);white-space:nowrap;font-family:var(--hf)}
+.fchip:hover{border-color:var(--t2);color:var(--text)}
+.fchip.on{background:var(--red);color:#fff;border-color:var(--red2)}
+.filter-type-sel{padding:4px 8px;border-radius:20px;font-size:11px;font-weight:700;height:auto;width:auto;flex:1;max-width:180px}
 
 /* Bottone Team Boss */
-.boss-team-btn {
-    background: none;
-    border: 2px solid var(--bd);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s;
-    padding: 0;
-}
-.boss-team-btn.enabled {
-    border-color: var(--red);
-    background: var(--redl);
-}
-.boss-team-btn svg {
-    width: 24px;
-    height: 24px;
-}
+.boss-team-btn{background:none;border:2px solid var(--bd);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:not-allowed;transition:all 0.2s;padding:0;opacity:.4;flex-shrink:0}
+.boss-team-btn.enabled{border-color:var(--red);background:var(--redl);opacity:1;cursor:pointer}
+.boss-team-btn.enabled:hover{background:var(--red);color:#fff}
+.boss-team-btn svg{width:22px;height:22px}
 
-/* Filtri Incontri */
-.encounter-filters {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 15px;
-}
+/* Team Viewer Modal */
+.tv-section{margin-bottom:18px}
+.tv-title{font-size:.65rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--t2);border-bottom:1.5px solid var(--bd);padding-bottom:6px;margin-bottom:10px}
+.tv-card{background:var(--bg);border-radius:var(--r2);padding:10px 12px;margin-bottom:7px}
+.tv-header{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.tv-badge{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tv-name{font-weight:900;font-size:.88rem}
+.tv-sub{font-size:10px;color:var(--t2);font-weight:600}
+.tv-team{display:flex;flex-wrap:wrap;gap:5px}
+.tv-poke{display:flex;flex-direction:column;align-items:center;gap:1px;min-width:42px}
+.tv-poke img{width:42px;height:42px;image-rendering:pixelated;object-fit:contain}
+.tv-poke-n{font-size:8px;color:var(--t2);font-weight:800;text-align:center;max-width:48px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tv-poke-l{font-size:8px;color:var(--t3);font-family:var(--mf)}
+.tv-empty{font-size:11px;color:var(--t3);font-style:italic}
 
 /* Bottoni Import/Export */
-.system-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 2px dashed var(--bd);
-}
+.system-actions{display:flex;gap:10px;margin-top:20px;padding-top:15px;border-top:2px dashed var(--bd)}
 
 
 
@@ -313,6 +344,7 @@ label{font-size:11px;color:var(--t2);margin-bottom:4px;display:block;font-weight
 <input type="file" id="up-pokedex" accept=".json" style="display:none">
 <input type="file" id="up-types" accept=".json" style="display:none">
 <input type="file" id="up-moves" accept=".json" style="display:none">
+<input type="file" id="up-import-run" accept=".json" style="display:none">
 
 <div id="app"></div>
 <script>
@@ -361,10 +393,13 @@ const I={
   party:`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>`,
   moon:`<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>`,
   sun:`<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`,
+  pokeball:`<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C7.03 2 2.9 5.4 2.18 10h19.64C21.1 5.4 16.97 2 12 2z" fill="#e3350d"/><path d="M2.18 14C2.9 18.6 7.03 22 12 22s9.1-3.4 9.82-8H2.18z" fill="white"/><path d="M2 12h20" stroke="#333" stroke-width="1.5"/><circle cx="12" cy="12" r="10" stroke="#333" stroke-width="1.5"/><circle cx="12" cy="12" r="3.5" fill="white" stroke="#333" stroke-width="1.5"/><circle cx="12" cy="12" r="1.5" fill="#333"/></svg>`,
+  export:`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17,8 12,3 7,8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>`,
+  import:`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`,
 };
 
 /* ═══ STATE ═══ */
-let S={view:'home',tab:'routes',stab:'party',modal:null,runs:[],runId:null,pokedexDB:[],typesDB:[],movesDB:{},ms:{},debounce:null,setupStatus:null};
+let S={view:'home',tab:'routes',stab:'party',modal:null,runs:[],runId:null,pokedexDB:[],typesDB:[],movesDB:{},ms:{},debounce:null,setupStatus:null,rFilters:{status:'',type:''}};
 
 /* ═══ STORAGE ═══ */
 function sv(){try{localStorage.setItem('nz_runs2',JSON.stringify(S.runs))}catch(e){}}
@@ -485,7 +520,7 @@ function getMoveCoverage(poke){
   return(poke.moves||[]).filter(Boolean).map(mv=>{
     const key=normMvKey(mv);const move=S.movesDB[key];
     if(!move)return{mv,type:null,se:[],found:false};
-    const se=(move.cat==='status'||!move.pow)?[]:getSETargets(move.type);
+    const se=(move.cat==='status'||move.pow<=0)?[]:getSETargets(move.type);
     return{mv,type:move.type,se,found:true};
   });
 }
@@ -554,6 +589,7 @@ function renderHome(){
       <div class="home-tools">
         <button class="btn btn-o btn-sm" data-a="open-db-setup">Database</button>
         <button class="btn btn-o btn-sm" data-a="open-game-manager">Giochi</button>
+        <button class="btn btn-o btn-sm" data-a="import-run">${I.import} Importa</button>
         <button class="btn-i" data-a="toggle-dark" title="Dark mode">${isDark?I.sun:I.moon}</button>
       </div>
     </div>
@@ -599,6 +635,7 @@ function renderTracker(){
     <div class="nav-r">
       <button class="btn-i" data-a="toggle-dark" title="Dark mode">${isDark?I.sun:I.moon}</button>
       <span class="run-chip">${r.name}</span>
+      <button class="btn btn-o btn-sm" data-a="export-run" title="Esporta run">${I.export} Esporta</button>
       <button class="btn btn-o btn-sm" data-a="reset-run">${I.refresh} Reset</button>
     </div>
   </nav>
@@ -617,23 +654,56 @@ function renderRoutes(r,g){
   const done=g.areas.filter(a=>r.encounters[a]?.status).length;
   const ENC=[{id:'caught',l:'Catturato',c:'ec'},{id:'defeated',l:'Sconfitto',c:'ed'},{id:'traded',l:'Scambiato',c:'et'},{id:'gifted',l:'Regalato',c:'eg'},{id:'missed',l:'Mancato',c:'em'}];
   const POS=['caught','traded','gifted'];
+  const rf=S.rFilters;
+  const STATUS_CHIPS=[{id:'',l:'Tutti'},{id:'caught',l:'Catturato'},{id:'defeated',l:'Sconfitto'},{id:'traded',l:'Scambiato'},{id:'gifted',l:'Regalato'},{id:'missed',l:'Mancato'},{id:'__none',l:'Non incontrato'}];
+  const filteredAreas=g.areas.filter(area=>{
+    const enc=r.encounters[area]||{};
+    const st=enc.status||null;
+    if(rf.status){
+      if(rf.status==='__none'){if(st!==null)return false;}
+      else{if(st!==rf.status)return false;}
+    }
+    if(rf.type){
+      const lp=enc.pokeId?(r.pokemon||[]).find(p=>p.id===enc.pokeId):null;
+      if(!lp)return false;
+      if(!(lp.types||[]).includes(rf.type))return false;
+    }
+    return true;
+  });
+  const filtersHTML=`<div class="route-filters">
+    <div class="filter-row">
+      <span class="filter-label">Stato</span>
+      ${STATUS_CHIPS.map(c=>`<button class="fchip${rf.status===c.id?' on':''}" data-a="rf-status" data-v="${c.id}">${c.l}</button>`).join('')}
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Tipo</span>
+      <select class="filter-type-sel" data-a="rf-type">
+        <option value="">Tutti i tipi</option>
+        ${TYPES.map(t=>`<option value="${t}" ${rf.type===t?'selected':''}>${t}</option>`).join('')}
+      </select>
+      ${rf.status||rf.type?`<button class="fchip" data-a="rf-reset" style="margin-left:4px">✕ Reset</button>`:''}
+    </div>
+  </div>`;
   return`<div>
   <div class="sh">
     <span class="sh-t">Aree & Incontri</span><span class="sh-c">${done}/${g.areas.length}</span>
     <button class="btn btn-o btn-sm" data-a="add-poke" data-st="party" style="margin-left:auto">${I.plus} Aggiungi Pkm manuale</button>
   </div>
-  <div class="rl">${g.areas.map(area=>{
+  ${filtersHTML}
+  ${filteredAreas.length===0?`<div class="empty" style="padding:40px 20px"><h2 style="font-size:1rem">Nessuna area trovata</h2><p>Prova a cambiare i filtri.</p></div>`:''}
+  <div class="rl">${filteredAreas.map(area=>{
     const enc=r.encounters[area]||{};
     const st=enc.status||null;
     const lp=enc.pokeId?(r.pokemon||[]).find(p=>p.id===enc.pokeId):null;
     const isPos=POS.includes(st);
-    return`<div class="rrow">
+    const isDone=st!==null;
+    return`<div class="rrow${isDone?' enc-done':''}">
       <div class="rname">${area}</div>
       <div class="rbtns">${ENC.map(e=>`<button class="eb ${e.c}${st===e.id?' on':''}" data-a="set-enc" data-area="${eu(area)}" data-st="${e.id}">${e.l}</button>`).join('')}</div>
       ${lp?`<div class="rpoke${lp.status==='dead'?' dead':''}">
         ${lp.sprite?`<img src="${lp.sprite}" alt="">`:''}
         <span>${lp.nickname||lp.speciesName}</span>
-        <span style="color:var(--t3);font-family:var(--mf);font-size:10px">Lv.${lp.level}</span>
+        <span style="color:var(--t3);font-family:var(--mf);font-size:10px">${lp.level?`Lv.${lp.level}`:''}</span>
         ${lp.status==='dead'?`<span style="color:var(--red);font-size:10px">${I.skull}</span>`:''}
       </div>`:isPos?`<button class="btn-g btn-sm" data-a="add-enc-poke" data-area="${eu(area)}">${I.plus} Pokémon</button>`:``}
     </div>`;
@@ -708,31 +778,48 @@ function renderAnalysis(r){
   const hasDB=Object.keys(S.movesDB).length>0;
   const teamCov=hasDB?getTeamCoverage(party):{};
 
-  const defTable=`<table class="type-tbl">
-    <thead><tr>
-      <th style="text-align:left">ATK</th>
-      ${party.map(p=>`<th>${(p.nickname||p.speciesName).slice(0,6).toUpperCase()}</th>`).join('')}
-      <th style="color:#dc2626">DEB</th><th style="color:#16a34a">RES</th><th style="color:#2563eb">IMM</th>
-    </tr></thead>
-    <tbody>${TYPES.map(type=>{
-      const ms=party.map(p=>defMult(type,p.types));
-      const w=ms.filter(m=>m>1).length,rs=ms.filter(m=>m>0&&m<1).length,im=ms.filter(m=>m===0).length;
-      return`<tr>
-        <td style="text-align:left;padding-left:4px">${tb(type,true)}</td>
-        ${ms.map((m,i)=>`<td><div class="ec2 ${mClass(m)}" title="${mLabel(m)} vs ${party[i].nickname||party[i].speciesName}">${mLabel(m)}</div></td>`).join('')}
-        <td class="cnt ${w?'cnt-w':'cnt-z'}">${w||'—'}</td>
-        <td class="cnt ${rs?'cnt-r':'cnt-z'}">${rs||'—'}</td>
-        <td class="cnt ${im?'cnt-i':'cnt-z'}">${im||'—'}</td>
-      </tr>`;
-    }).join('')}</tbody>
-  </table>
-  <div class="leg">
-    <div style="display:flex;align-items:center;gap:4px"><div class="ec2 e4" style="width:30px;height:20px;font-size:9px">×4</div>Doppia deb.</div>
-    <div style="display:flex;align-items:center;gap:4px"><div class="ec2 e2" style="width:30px;height:20px;font-size:9px">×2</div>Deb.</div>
-    <div style="display:flex;align-items:center;gap:4px"><div class="ec2 e1" style="width:30px;height:20px;font-size:9px">—</div>Neutro</div>
-    <div style="display:flex;align-items:center;gap:4px"><div class="ec2 e05" style="width:30px;height:20px;font-size:9px">½</div>Res.</div>
-    <div style="display:flex;align-items:center;gap:4px"><div class="ec2 e025" style="width:30px;height:20px;font-size:9px">¼</div>2× Res.</div>
-    <div style="display:flex;align-items:center;gap:4px"><div class="ec2 e0" style="width:30px;height:20px;font-size:9px">✕</div>Immune</div>
+  // Defense cards — per pokemon
+  const defCards=party.map(p=>{
+    const x4=TYPES.filter(t=>defMult(t,p.types)>=4);
+    const x2=TYPES.filter(t=>defMult(t,p.types)===2);
+    const x0=TYPES.filter(t=>defMult(t,p.types)===0);
+    const x05=TYPES.filter(t=>defMult(t,p.types)===0.5);
+    const x025=TYPES.filter(t=>defMult(t,p.types)===0.25);
+    const allNeutral=!x4.length&&!x2.length&&!x0.length&&!x05.length&&!x025.length;
+    return`<div class="def-card">
+      <div class="def-card-hdr">
+        ${p.thumbnail?`<img class="def-thumb" src="${p.thumbnail}" alt="">`:`<div class="def-thumb" style="background:var(--bd);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--t3);font-size:20px">?</div>`}
+        <div><div class="def-pname">${p.nickname||p.speciesName}</div><div class="def-types">${(p.types||[]).map(t=>tb(t,true)).join('')}</div></div>
+      </div>
+      ${allNeutral?`<div class="def-none">Nessuna debolezza o resistenza</div>`:''}
+      ${x4.length?`<div class="def-row"><span class="def-mult x4">×4</span>${x4.map(t=>tb(t,true)).join('')}</div>`:''}
+      ${x2.length?`<div class="def-row"><span class="def-mult x2">×2</span>${x2.map(t=>tb(t,true)).join('')}</div>`:''}
+      ${x0.length?`<div class="def-row"><span class="def-mult x0">✕</span>${x0.map(t=>tb(t,true)).join('')}</div>`:''}
+      ${x05.length?`<div class="def-row"><span class="def-mult x05">½</span>${x05.map(t=>tb(t,true)).join('')}</div>`:''}
+      ${x025.length?`<div class="def-row"><span class="def-mult x025">¼</span>${x025.map(t=>tb(t,true)).join('')}</div>`:''}
+    </div>`;
+  }).join('');
+
+  // Team-level summary: types that hit ≥2 pokemon for ×2 or more
+  const teamWeak=TYPES.filter(t=>{
+    const cnt=party.filter(p=>defMult(t,p.types)>=2).length;
+    return cnt>=2;
+  });
+  const teamX4=TYPES.filter(t=>party.some(p=>defMult(t,p.types)>=4));
+  const teamImm=TYPES.filter(t=>party.every(p=>defMult(t,p.types)===0));
+  const summaryHTML=(teamX4.length||teamWeak.length||teamImm.length)?`<div class="def-summary">
+    ${teamX4.map(t=>`<div class="def-sum-item danger">×4 ${tb(t,true)}</div>`).join('')}
+    ${teamWeak.filter(t=>!teamX4.includes(t)).map(t=>`<div class="def-sum-item warning">×2+ ${tb(t,true)} (${party.filter(p=>defMult(t,p.types)>=2).length} pkm)</div>`).join('')}
+    ${teamImm.map(t=>`<div class="def-sum-item immune">✕ ${tb(t,true)} (tutti)</div>`).join('')}
+  </div>`:
+  `<p class="def-none" style="margin-bottom:10px">Nessuna debolezza comune al team.</p>`;
+
+  const legend=`<div class="leg">
+    <div style="display:flex;align-items:center;gap:4px"><span class="def-mult x4">×4</span>Doppia deb.</div>
+    <div style="display:flex;align-items:center;gap:4px"><span class="def-mult x2">×2</span>Deb.</div>
+    <div style="display:flex;align-items:center;gap:4px"><span class="def-mult x0">✕</span>Immune</div>
+    <div style="display:flex;align-items:center;gap:4px"><span class="def-mult x05">½</span>Res.</div>
+    <div style="display:flex;align-items:center;gap:4px"><span class="def-mult x025">¼</span>2× Res.</div>
   </div>`;
 
   const covSec=!hasDB
@@ -765,8 +852,11 @@ function renderAnalysis(r){
 
   return`<div>
   <div class="an-sec">
-    <div class="an-ttl">${I.chart} Difesa — debolezze e resistenze del team per tipo</div>
-    <div style="overflow-x:auto">${defTable}</div>
+    <div class="an-ttl">${I.chart} Difesa — debolezze e resistenze per Pokémon</div>
+    <p style="font-size:11px;color:var(--t2);margin-bottom:10px">Vulnerabilità comuni al team:</p>
+    ${summaryHTML}
+    <div class="def-cards">${defCards}</div>
+    ${legend}
   </div>
   <div class="an-sec">
     <div class="an-ttl">${I.chart} Copertura offensiva — super efficacia delle mosse</div>
@@ -785,10 +875,12 @@ function renderGyms(r,g){
     const c=TC[gym.type||gym.type]||'#888';
     const name=isE4?gym.name:gym.leader;
     const city=isE4?'Elite Four / Campione':gym.city;
+    const hasTeam=rg.team&&rg.team.length>0;
     return`<div class="gymc${!isE4&&rg.earned?' earned':''}">
       <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
         <div style="width:30px;height:30px;border-radius:50%;background:${c}22;border:1.5px solid ${c}55;display:flex;align-items:center;justify-content:center;flex-shrink:0">${I.badge}</div>
         <div><div class="gym-ln">${name}</div><div class="gym-ct">${city}</div></div>
+        <button class="boss-team-btn${hasTeam?' enabled':''}" ${hasTeam?'':'disabled'} data-a="view-boss-team" data-gi="${i}" data-e4="${isE4?1:0}" title="Visualizza team" style="margin-left:auto">${I.pokeball}</button>
       </div>
       <div class="gym-info">
         ${(gym.type&&gym.type!=='Mixed')?tb(gym.type,true):`<span style="font-size:11px;color:var(--t2);font-weight:700">Mixed</span>`}
@@ -825,6 +917,8 @@ function renderModal(){
   else if(t==='confirm-ko')c=renderKoModal();
   else if(t==='game-manager')c=renderGameManager();
   else if(t==='game-editor')c=renderGameEditor();
+  else if(t==='team-viewer')c=renderTeamViewer();
+  else if(t==='boss-team-view')c=renderBossTeamView();
   return`<div class="mo" data-a="close-modal-bg">${c}</div>`;
 }
 
@@ -875,7 +969,7 @@ function renderPokeModal(isEdit){
   </div>`:''}</div>
   <div class="fg"><label>Soprannome</label><input id="poke-nick" placeholder="Soprannome (opzionale)" value="${ms.nickname||''}" ></div>
   <div class="fr">
-    <div class="fg"><label>Livello *</label><input id="poke-lv" type="number" min="1" max="100" placeholder="Lv." value="${ms.level||''}" ></div>
+    <div class="fg"><label>Livello</label><input id="poke-lv" type="number" min="1" max="100" placeholder="Lv. (opzionale)" value="${ms.level||''}" ></div>
     <div class="fg"><label>Stato</label><select id="poke-status">
       <option value="party" ${ms.status==='party'?'selected':''}>Squadra</option>
       <option value="box" ${(ms.status==='box'||(ms.fromEncounter&&!ms.status))?'selected':''}>Box</option>
@@ -1061,6 +1155,83 @@ function renderGameEditor(){
   </div>`;
 }
 
+function renderTeamViewer(){
+  const r=run();const g=game();if(!r||!g)return'';
+  const gymCard=(gym,i,isE4)=>{
+    const rg=isE4?(r.e4teams||[])[i]||{team:[]}:(r.gyms||[])[i]||{team:[]};
+    const team=rg.team||[];
+    if(!team.length)return'';
+    const name=isE4?gym.name:gym.leader;
+    const c=TC[gym.type||'Normal']||'#888';
+    return`<div class="tv-card">
+      <div class="tv-header">
+        <div class="tv-badge" style="background:${c}22;border:1.5px solid ${c}66">${I.badge}</div>
+        <div>
+          <div class="tv-name">${name}</div>
+          <div class="tv-sub">${isE4?'Elite Four / Campione':gym.city} ${gym.type&&gym.type!=='Mixed'?'· '+gym.type:''}</div>
+        </div>
+      </div>
+      <div class="tv-team">${team.map(s=>`<div class="tv-poke">
+        ${s.sprite?`<img src="${s.sprite}">`:`<div style="width:42px;height:42px;background:var(--bd);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--t3);font-size:18px">?</div>`}
+        <div class="tv-poke-n">${s.displayName||''}</div>
+        ${s.level?`<div class="tv-poke-l">Lv.${s.level}</div>`:''}
+        ${(s.moves||[]).filter(Boolean).length?`<div style="display:flex;flex-wrap:wrap;gap:2px;justify-content:center;margin-top:2px">${(s.moves||[]).filter(Boolean).map(m=>`<span class="pmv">${m}</span>`).join('')}</div>`:''}
+      </div>`).join('')}</div>
+    </div>`;
+  };
+  const gymCards=g.gyms.map((gym,i)=>gymCard(gym,i,false)).filter(Boolean).join('');
+  const e4Cards=g.e4.map((e4,i)=>gymCard(e4,i,true)).filter(Boolean).join('');
+  return`<div class="mb wide" style="max-width:760px">
+  <button class="m-close" data-a="close-modal">${I.x}</button>
+  <div class="m-ttl">${I.pokeball} Team Boss — ${r.name}</div>
+  ${gymCards?`<div class="tv-section"><div class="tv-title">Palestre</div>${gymCards}</div>`:''}
+  ${e4Cards?`<div class="tv-section"><div class="tv-title">Elite Four & Campione</div>${e4Cards}</div>`:''}
+  ${!gymCards&&!e4Cards?`<p class="tv-empty" style="padding:20px 0">Nessun team ancora impostato.</p>`:''}
+  <div class="m-act"><button class="btn btn-o" data-a="close-modal">Chiudi</button></div>
+</div>`;
+}
+
+function renderBossTeamView(){
+  const r=run();const g=game();if(!r||!g)return'';
+  const ms=S.ms;
+  const isE4=ms.isE4;
+  const gi=ms.gymIdx;
+  const gymDef=isE4?g.e4[gi]:g.gyms[gi];
+  const rg=isE4?(r.e4teams||[])[gi]||{team:[]}:(r.gyms||[])[gi]||{team:[]};
+  const team=rg.team||[];
+  const name=isE4?gymDef?.name:gymDef?.leader;
+  const city=isE4?'Elite Four / Campione':gymDef?.city;
+  const type=gymDef?.type||'';
+  const c=TC[type]||'#888';
+
+  return`<div class="mb wide" style="max-width:700px">
+  <button class="m-close" data-a="close-modal">${I.x}</button>
+  <div class="btv-header">
+    <div class="btv-badge-circle" style="background:${c}22;border:2px solid ${c}66">${I.pokeball}</div>
+    <div>
+      <div class="btv-leader-name">${name||'Allenatore'}</div>
+      <div class="btv-leader-sub">${city}${type&&type!=='Mixed'?' · '+type:''}</div>
+    </div>
+    ${type&&type!=='Mixed'?`<div style="margin-left:auto">${tb(type,true)}</div>`:''}
+  </div>
+  ${!team.length?`<p class="def-none" style="padding:20px 0">Nessun team impostato.</p>`:`<div class="btv-grid">
+    ${team.map(s=>{
+      const pt=s.types||[];
+      return`<div class="btv-poke">
+        ${s.thumbnail?`<img class="btv-thumb" src="${s.thumbnail}" alt="${s.displayName}">`:`<div class="btv-thumb-ph">?</div>`}
+        <div class="btv-pname">${s.displayName||s.species||'?'}</div>
+        ${s.level?`<div class="btv-lv">Lv.${s.level}</div>`:''}
+        ${pt.length?`<div class="btv-types">${pt.map(t=>tb(t,true)).join('')}</div>`:''}
+        ${(s.moves||[]).filter(Boolean).length?`<div class="btv-moves">${(s.moves||[]).filter(Boolean).map(m=>`<div class="btv-mv">${m}</div>`).join('')}</div>`:''}
+      </div>`;
+    }).join('')}
+  </div>`}
+  <div class="m-act"><button class="btn btn-o" data-a="close-modal">Chiudi</button>
+    <button class="btn btn-g btn-sm" data-a="edit-gym" data-gi="${gi}" data-e4="${isE4?1:0}" style="margin-left:auto">${I.edit} Modifica team</button>
+  </div>
+</div>`;
+}
+
 /* ══════════════ EVENTS ══════════════ */
 document.addEventListener('click',async e=>{
   const el=e.target.closest('[data-a]');if(!el)return;
@@ -1219,14 +1390,37 @@ document.addEventListener('click',async e=>{
     if(r.gyms[gi]){r.gyms[gi].earned=!r.gyms[gi].earned;sv();render();}
   }
 
+  /* VIEW TEAMS */
+  else if(a==='view-teams'){S.modal={type:'team-viewer'};render();}
+  else if(a==='view-boss-team'){
+    const gi=parseInt(el.dataset.gi);const isE4=el.dataset.e4==='1';
+    S.modal={type:'boss-team-view'};S.ms={gymIdx:gi,isE4};render();
+  }
+
+  /* EXPORT / IMPORT */
+  else if(a==='export-run'){
+    const r=run();if(!r)return;
+    const blob=new Blob([JSON.stringify(r,null,2)],{type:'application/json'});
+    const url=URL.createObjectURL(blob);
+    const a2=document.createElement('a');
+    a2.href=url;a2.download=`nuzlocke-${r.name.toLowerCase().replace(/[^a-z0-9]+/g,'-')}.json`;
+    document.body.appendChild(a2);a2.click();document.body.removeChild(a2);
+    URL.revokeObjectURL(url);
+  }
+  else if(a==='import-run'){document.getElementById('up-import-run').click();}
+
+  /* ROUTE FILTERS */
+  else if(a==='rf-status'){S.rFilters.status=el.dataset.v;render();}
+  else if(a==='rf-reset'){S.rFilters={status:'',type:''};render();}
+
   /* GYM TEAM */
   else if(a==='edit-gym'){
     const gi=parseInt(el.dataset.gi);const isE4=el.dataset.e4==='1';const r=run();
     /* FIX: usato gi invece di i */
     const existing=isE4?(r.e4teams||[])[gi]||{team:[]}:(r.gyms||[])[gi]||{earned:false,team:[]};
     const slots=Array.from({length:6},(_,i)=>{
-      const s=existing[i];
-      return s?{search:s.displayName,displayName:s.displayName,sprite:s.sprite,thumbnail:s.thumbnail||s.sprite,level:s.level||'',species:s.species,moves:s.moves||['','','',''],sugg:[]}:{search:'',displayName:'',sprite:null,thumbnail:null,level:'',species:'',moves:['','','',''],sugg:[]};
+      const s=(existing.team||[])[i];
+      return s?{search:s.displayName||s.species||'',displayName:s.displayName,sprite:s.sprite,thumbnail:s.thumbnail||s.sprite,level:s.level||'',species:s.species,moves:s.moves||['','','',''],sugg:[]}:{search:'',displayName:'',sprite:null,thumbnail:null,level:'',species:'',moves:['','','',''],sugg:[]};
     });
     S.modal={type:'edit-gym'};S.ms={gymIdx:gi,isE4,slots};render();
   }
@@ -1323,6 +1517,7 @@ document.addEventListener('input',e=>{
       }
     },150);
   }
+  else if(a==='rf-type'){S.rFilters.type=el.value;render();}
 });
 
 /* File upload listeners */
@@ -1349,11 +1544,36 @@ document.addEventListener('input',e=>{
   });
 });
 
+/* Import Run listener */
+const importInput=document.getElementById('up-import-run');
+if(importInput){
+  importInput.addEventListener('change',e=>{
+    const file=e.target.files[0];if(!file)return;
+    const reader=new FileReader();
+    reader.onload=evt=>{
+      try{
+        const data=JSON.parse(evt.target.result);
+        if(!data.id||!data.name||!data.game){alert('File non valido: non è un salvataggio Nuzlocke.Log');return;}
+        const existing=S.runs.find(r=>r.id===data.id);
+        if(existing){
+          if(!confirm(`Esiste già una run "${existing.name}". Sovrascrivere?`))return;
+          S.runs=S.runs.filter(r=>r.id!==data.id);
+        }
+        S.runs.push(data);sv();render();
+        alert(`Run "${data.name}" importata con successo!`);
+      }catch(err){alert('Errore nel file di import: JSON non valido');}
+    };
+    reader.readAsText(file);
+    e.target.value='';
+  });
+}
+
 function commitPoke(isEdit){
   let sp=S.ms.selectedPoke;
   if(!sp){alert('Seleziona un Pokémon valido dalla lista.');return false;}
-  const lv=parseInt(document.getElementById('poke-lv')?.value)||0;
-  if(!lv||lv<1||lv>100){alert('Livello non valido (1–100).');return false;}
+  const lvStr=(document.getElementById('poke-lv')?.value||'').trim();
+  const lv=lvStr?parseInt(lvStr):1;
+  if(lvStr&&(isNaN(lv)||lv<1||lv>100)){alert('Livello non valido (1–100).');return false;}
   const nick=document.getElementById('poke-nick')?.value.trim()||'';
   const area=document.getElementById('poke-area')?.value||'';
   const status=document.getElementById('poke-status')?.value||'party';
@@ -1375,7 +1595,8 @@ function commitPoke(isEdit){
       if(!r.encounters[S.ms.area])r.encounters[S.ms.area]={};
       r.encounters[S.ms.area].pokeId=p.id;
     }
-    if(status==='box'&&r.pokemon.filter(x=>x.status==='party').length<6){
+    // Se NON è da un incontro, chiedi se aggiungere in squadra
+    if(!S.ms.fromEncounter&&status==='box'&&r.pokemon.filter(x=>x.status==='party').length<6){
       if(confirm(`${p.nickname||p.speciesName} aggiunto al Box. Aggiungi anche in squadra?`))p.status='party';
     }
   }
