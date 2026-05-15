@@ -78,20 +78,28 @@ label{font-size:11px;color:var(--t2);margin-bottom:4px;display:block;font-weight
 .empty h2{font-size:1.2rem;color:var(--t2);margin-bottom:6px}.empty p{color:var(--t3)}
 
 /* POKEMON CARDS */
-.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px;margin-bottom:20px}
-.pc{background:var(--card);border-radius:var(--r3);padding:15px 13px;box-shadow:var(--sh);transition:all .2s;border:2px solid transparent}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin-bottom:20px}
+.pc{background:var(--card);border-radius:var(--r3);padding:14px 14px 12px;box-shadow:var(--sh);transition:all .2s;border:2px solid transparent}
 .pc:hover{box-shadow:var(--sh2);border-color:var(--bd2)}
 .pc.dead{opacity:.5;filter:grayscale(.8)}
-.psprite{width:80px;height:80px;object-fit:contain;image-rendering:pixelated;display:block;margin:0 auto 6px}
-.psprite-ph{width:80px;height:80px;background:var(--bg);border-radius:var(--r2);display:flex;align-items:center;justify-content:center;margin:0 auto 6px;color:var(--t3);font-size:28px}
-.pname{font-weight:900;font-size:.9rem;text-align:center;margin-bottom:1px}
-.pspec{font-size:10px;color:var(--t2);text-align:center;margin-bottom:6px}
-.ptyp{display:flex;justify-content:center;gap:3px;margin-bottom:6px}
-.prow{font-family:var(--mf);font-size:10px;color:var(--t2);text-align:center;margin-bottom:2px}
-.pmovs{display:flex;flex-wrap:wrap;gap:3px;justify-content:center;margin:5px 0}
-.pmv{font-size:9px;padding:1px 5px;background:var(--bg);border:1px solid var(--bd);border-radius:4px;color:var(--t2);font-weight:700}
-.par{font-size:10px;color:var(--t3);text-align:center;margin-bottom:9px;display:flex;align-items:center;justify-content:center;gap:3px}
-.pac{display:flex;gap:3px;justify-content:center;flex-wrap:wrap}
+.pc-top{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;margin-bottom:10px}
+.pk-spr{width:88px;height:88px;object-fit:contain;image-rendering:pixelated;display:block}
+.pk-spr-ph{width:88px;height:88px;background:var(--bg);border-radius:var(--r2);display:flex;align-items:center;justify-content:center;color:var(--t3);font-size:30px}
+.pc-vstats{display:flex;gap:5px;align-items:flex-end}
+.pc-vbar{display:flex;flex-direction:column;align-items:center;gap:3px}
+.pc-vtrack{width:11px;border-radius:4px;background:var(--bd);overflow:hidden;display:flex;align-items:flex-end}
+.pc-vfill{width:100%;border-radius:4px;transition:height .3s}
+.pc-vlbl{font-size:7px;font-family:var(--mf);color:var(--t3);text-align:center;line-height:1}
+.pc-info{display:flex;flex-direction:column;gap:2px;min-width:0}
+.pname{font-weight:900;font-size:1rem;margin-bottom:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pspec{font-size:10px;color:var(--t2);margin-bottom:2px}
+.ptyp{display:flex;gap:3px;margin-bottom:3px;flex-wrap:wrap}
+.prow{font-family:var(--mf);font-size:9.5px;color:var(--t2);margin-bottom:1px;line-height:1.4}
+.par{font-size:10px;color:var(--t3);margin-top:2px;display:flex;align-items:center;gap:3px}
+.pmovs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0 0 10px}
+.pmv{font-size:12px;font-weight:800;padding:8px 6px;background:var(--bg);border:none;border-radius:22px;color:var(--t2);text-align:center;line-height:1.2;letter-spacing:.01em}
+.pac{display:flex;gap:6px;align-items:center}
+.pac .btn{flex:1;justify-content:center;font-size:12px;padding:8px 6px}
 
 /* GRAVEYARD */
 .ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:9px}
@@ -212,8 +220,11 @@ label{font-size:11px;color:var(--t2);margin-bottom:4px;display:block;font-weight
   .content{padding:14px 16px}
   .sh{gap:6px}
   .pgrid{grid-template-columns:repeat(2,1fr);gap:8px}
-  .pc{padding:12px 10px}
-  .psprite,.psprite-ph{width:64px;height:64px}
+  .pc{padding:11px 10px}
+  .pk-spr,.pk-spr-ph{width:72px;height:72px}
+  .pk-spr,.pk-spr-ph{width:72px;height:72px}
+  .pc-vtrack{height:56px!important}
+  .pmv{font-size:11px;padding:7px 4px}
   .ggrid{grid-template-columns:repeat(2,1fr);gap:8px}
   .gc{padding:10px}
   .rrow{flex-direction:column;align-items:flex-start;gap:8px;padding:10px 12px}
@@ -238,6 +249,7 @@ label{font-size:11px;color:var(--t2);margin-bottom:4px;display:block;font-weight
 }
 @media (max-width: 480px) {
   .pgrid{grid-template-columns:1fr}
+  .pc-top{grid-template-columns:auto 1fr auto;gap:7px}
   .gym-slots{grid-template-columns:1fr}
   .cov-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -531,6 +543,28 @@ function getMoveTypeColor(moveName){
   const move=S.movesDB[key];
   return move?(TC[move.type]||null):null;
 }
+function statsBarVertical(stats){
+  if(!stats)return'';
+  const SK=[
+    {k:'HP',         l:'HP',  c:'#69DC12'},
+    {k:'Attack',     l:'Atk', c:'#EFCC18'},
+    {k:'Defense',    l:'Def', c:'#E86412'},
+    {k:'Sp. Attack', l:'SpA', c:'#14C3F1'},
+    {k:'Sp. Defense',l:'SpD', c:'#4A6ADF'},
+    {k:'Speed',      l:'Spe', c:'#D51DAD'}
+  ];
+  const MAX=255;const TH=68;
+  return'<div class="pc-vstats">'+SK.map(s=>{
+    const v=stats[s.k]||0;
+    const h=Math.max(Math.round((v/MAX)*TH),3);
+    return`<div class="pc-vbar">
+<div class="pc-vtrack" style="height:${TH}px">
+<div class="pc-vfill" style="height:${h}px;background:${s.c}"></div>
+</div>
+<span class="pc-vlbl">${s.l}</span>
+</div>`;
+  }).join('')+'</div>';
+}
 function statsBarSVG(stats, compact) {
   if (!stats) return '';
 
@@ -808,21 +842,27 @@ function renderBoxOnly(r,g){
 }
 function pokeCard(p,g){
   const gen=g?g.gen:3;const moves=(p.moves||[]).filter(Boolean);const ne=NE[p.nature];
+  const isParty=p.status==='party';
   return`<div class="pc${p.status==='dead'?' dead':''}">
-  ${p.sprite?`<img class="psprite" src="${p.thumbnail}">`:`<div class="psprite-ph">${I.party}</div>`}
-  <div class="pname">${p.nickname||p.speciesName}</div>
-  ${p.nickname?`<div class="pspec">${p.speciesName}</div>`:''}
-  <div class="ptyp">${(p.types||[]).map(t=>tb(t)).join('')}</div>
-  <div class="prow">Lv.${p.level}${gen>=3&&p.nature?` · ${p.nature}${ne?` (+${ne.u}/-${ne.d})`:''}`:''}</div>
-  ${gen>=3&&p.ability?`<div class="prow">${p.ability}</div>`:''}
-  ${moves.length?`<div class="pmovs">${moves.map(m=>{const c=getMoveTypeColor(m);return`<span class="pmv" style="${c?`background:${c};color:#fff;border-color:${c}`:''}">${m}</span>`;}).join('')}</div>`:''}
-  ${p.stats?`<div style="margin:6px 0 2px;padding:0 2px">${statsBarSVG(p.stats,true)}</div>`:''}
-  <div class="par">${I.map} ${p.area||'—'}</div>
+  <div class="pc-top">
+    <div>${statsBarVertical(p.stats)}</div>
+    ${p.sprite?`<img class="pk-spr" src="${p.thumbnail||p.sprite}">`:`<div class="pk-spr-ph">${I.party}</div>`}
+    <div class="pc-info">
+      <div class="pname">${p.nickname||p.speciesName}</div>
+      ${p.nickname?`<div class="pspec">${p.speciesName}</div>`:''}
+      <div class="ptyp">${(p.types||[]).map(t=>tb(t)).join('')}</div>
+      <div class="prow">Lv.${p.level}${gen>=3&&p.nature?`<br>${p.nature}${ne?` (+${ne.u}/-${ne.d})`:''}`:''}</div>
+      ${gen>=3&&p.ability?`<div class="prow">${p.ability}</div>`:''}
+      <div class="par">${I.map} ${p.area||'—'}</div>
+    </div>
+  </div>
+  ${moves.length?`<div class="pmovs">${moves.map(m=>{const c=getMoveTypeColor(m);return`<span class="pmv" style="${c?`background:${c};color:#fff`:''}"> ${m}</span>`;}).join('')}</div>`:'<div style="margin-bottom:10px"></div>'}
   <div class="pac">
-    <button class="btn-g btn-sm" data-a="edit-poke" data-pid="${p.id}">${I.edit} Edit</button>
-    ${p.status==='party'?`<button class="btn-g btn-sm" data-a="poke-box" data-pid="${p.id}">${I.box}</button>`:
-    `<button class="btn-g btn-sm" data-a="poke-party" data-pid="${p.id}">${I.party}</button>`}
-    <button class="btn btn-d btn-sm" data-a="poke-ko" data-pid="${p.id}">${I.skull}</button>
+    <button class="btn btn-r" data-a="edit-poke" data-pid="${p.id}">${I.edit} Edit</button>
+    ${isParty
+      ?`<button class="btn btn-r" data-a="poke-box" data-pid="${p.id}">${I.box} Box</button>`
+      :`<button class="btn btn-r" data-a="poke-party" data-pid="${p.id}">${I.party} Squadra</button>`}
+    <button class="btn btn-o" data-a="poke-ko" data-pid="${p.id}" style="color:var(--red);flex:0 0 auto">${I.skull} Grave</button>
   </div>
 </div>`;
 }
