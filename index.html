@@ -89,8 +89,11 @@ label{font-size:11px;color:var(--t2);margin-bottom:4px;display:block;font-weight
 .pc-vbar{display:flex;flex-direction:column;align-items:center;gap:3px}
 .pc-vtrack{width:11px;border-radius:4px;background:var(--bd);overflow:hidden;display:flex;align-items:flex-end}
 .pc-vfill{width:100%;border-radius:4px;transition:height .3s}
-.pc-vlbl{font-size:7px;font-family:var(--mf);color:var(--t3);text-align:center;line-height:1}
-.pc-info{display:flex;flex-direction:column;gap:2px;min-width:0}
+.pc-vlbl{font-size:7px;font-family:var(--mf);color:var(--t3);text-align:center;line-height:1;margin-top:1px}
+.pc-vval{font-size:10px;font-family:var(--mf);color:var(--text);font-weight:700;text-align:center;line-height:1;margin-top:1px}
+.pc-vstats-wrap{display:flex;flex-direction:column;gap:0}
+.pc-vtot{font-size:8px;font-family:var(--mf);color:var(--t2);margin-top:4px;text-align:center;white-space:nowrap}
+.pc-vtot strong{color:var(--text);font-weight:800}.pc-info{display:flex;flex-direction:column;gap:2px;min-width:0}
 .pname{font-weight:900;font-size:1rem;margin-bottom:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pspec{font-size:10px;color:var(--t2);margin-bottom:2px}
 .ptyp{display:flex;gap:3px;margin-bottom:3px;flex-wrap:wrap}
@@ -553,17 +556,19 @@ function statsBarVertical(stats){
     {k:'Sp. Defense',l:'SpD', c:'#4A6ADF'},
     {k:'Speed',      l:'Spe', c:'#D51DAD'}
   ];
-  const MAX=255;const TH=68;
-  return'<div class="pc-vstats">'+SK.map(s=>{
+  const MAX=255;const TH=64;
+  const total=SK.reduce((s,x)=>s+(stats[x.k]||0),0);
+  const bars='<div class="pc-vstats">'+SK.map(s=>{
     const v=stats[s.k]||0;
     const h=Math.max(Math.round((v/MAX)*TH),3);
     return`<div class="pc-vbar">
-<div class="pc-vtrack" style="height:${TH}px">
-<div class="pc-vfill" style="height:${h}px;background:${s.c}"></div>
-</div>
+<div class="pc-vtrack" style="height:${TH}px"><div class="pc-vfill" style="height:${h}px;background:${s.c}"></div></div>
 <span class="pc-vlbl">${s.l}</span>
+<span class="pc-vval">${v}</span>
 </div>`;
   }).join('')+'</div>';
+  const tot=`<div class="pc-vtot">Tot <strong>${total}</strong></div>`;
+  return`<div class="pc-vstats-wrap">${bars}${tot}</div>`;
 }
 function statsBarSVG(stats, compact) {
   if (!stats) return '';
