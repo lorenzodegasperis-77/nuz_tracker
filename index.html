@@ -7,7 +7,7 @@
 <title>Nuzlocke Tracker</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f2f2f7;--card:#fff;--red:#FF0000;--red2:#FF0000;--blue:#3b7dca;--green:#16a34a;--amber:#d97706;--text:#1c1c1e;--t2:#6b6b75;--t3:#aeaeb2;--bd:#e5e5ea;--bd2:#d1d5db;--sh:0 1px 4px rgba(0,0,0,.07),0 2px 8px rgba(0,0,0,.04);--sh2:0 4px 16px rgba(0,0,0,.11),0 2px 6px rgba(0,0,0,.06);--r1:8px;--r2:12px;--r3:16px;--hf:'Nunito',sans-serif;--mf:'Share Tech Mono',monospace;}
+:root{--bg:#f2f2f7;--card:#fff;--red:#FF0000;--red2:#FF4B4B;--blue:#3b7dca;--green:#16a34a;--amber:#d97706;--text:#1c1c1e;--t2:#6b6b75;--t3:#aeaeb2;--bd:#e5e5ea;--bd2:#d1d5db;--sh:0 1px 4px rgba(0,0,0,.07),0 2px 8px rgba(0,0,0,.04);--sh2:0 4px 16px rgba(0,0,0,.11),0 2px 6px rgba(0,0,0,.06);--r1:8px;--r2:12px;--r3:16px;--hf:'Nunito',sans-serif;--mf:'Share Tech Mono',monospace;}
 .dark{--bg:#0f0f12;--card:#1c1c1e;--text:#f2f2f7;--t2:#a1a1aa;--t3:#71717a;--bd:#2c2c2e;--bd2:#3a3a3c;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -21,7 +21,7 @@ button{cursor:pointer;border:none;font-family:var(--hf);font-weight:700;transiti
 .btn-g{background:var(--red);color:var(--bg);padding:5px 11px;font-size:12px;border-radius:var(--r1)}.btn-g:hover{background:var(--bg);color:var(--text)}
 .btn-d{color:var(--red);border:none}.btn-d:hover{background:#ffddd5}
 .btn-sm{padding:5px 11px;font-size:12px}
-.btn-i{background:#f2f2f7;color:#FF0000;width:30px;height:30px;justify-content:center;border-radius:50%}.btn-i:hover{background:var(--bg);color:var(--text)}
+.btn-i{background:#f2f2f7;color:#FF0000;width:30px;height:30px;justify-content:center;border-radius:50%; border:1px solid red}.btn-i:hover{background:var(--red2);color:var(#f2f2f7)}
 input,select{background:var(--bg);border:1.5px solid var(--bd);color:var(--text);font-family:var(--hf);font-size:14px;font-weight:600;padding:8px 12px;border-radius:var(--r1);width:100%;outline:none;transition:all .15s}
 input:focus,select:focus{border-color:var(--red);background:#fff;box-shadow:0 0 0 3px rgba(227,53,13,.1)}
 .dark input:focus,.dark select:focus{background:#2c2c2e}
@@ -68,7 +68,7 @@ label{font-size:11px;color:var(--t2);margin-bottom:4px;display:block;font-weight
 .rc{background:var(--card);border-radius:var(--r3);padding:20px;cursor:pointer;transition:all .2s;box-shadow:var(--sh);border:2px solid transparent;position:relative;overflow:hidden}
 .rc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--red)}
 .rc:hover{transform:translateY(-3px);box-shadow:var(--sh2);border-color:var(--red)}
-.rc-name{font-weight:900;font-size:1.05rem;margin-bottom:2px;color:#1c1c1e}
+.rc-name{font-weight:900;font-size:1.05rem;margin-bottom:2px;color:var(--text)}
 .rc-game{font-size:11px;color:var(--t2);font-weight:700;margin-bottom:12px;font-family:var(--mf)}
 .rc-stats{display:flex;gap:14px;font-size:11px;font-weight:800;flex-wrap:wrap}
 .rc-stat{display:flex;align-items:center;gap:4px;color:var(--t2)}
@@ -253,7 +253,6 @@ body:not(.dark) .nav{background:#FF0000}
 body:not(.dark) .nav-logo{color:#f2f2f7}
 body:not(.dark) .nav-tab{color:rgba(255,255,255,.75)}
 body:not(.dark) .nav-tab:hover{color:#f2f2f7;background:rgba(255,255,255,.15)}
-body:not(.dark) .nav-r .btn-i{color:#FF0000}
 body:not(.dark) .run-chip{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.15);color:#f2f2f7}
 body:not(.dark) .nav-r .btn-o{border-color:rgba(255,255,255,.55);color:#f2f2f7}
 body:not(.dark) .nav-r .btn-o:hover{background:rgba(255,255,255,.2)}
@@ -645,7 +644,6 @@ function renderHome(){
       <div class="home-logo">Nuzlocke<span>.</span>Log</div>
       <div class="home-sub"><strong>Campaign Tracker</strong></div>
       <div class="home-tools">
-        <button class="btn btn-o btn-sm" data-a="open-db-setup">Database</button>
         <button class="btn btn-o btn-sm" data-a="open-game-manager">Giochi</button>
         <button class="btn btn-o btn-sm" data-a="import-run">${I.import} Importa</button>
         <button class="btn-i" data-a="toggle-dark" title="Dark mode">${isDark?I.sun:I.moon}</button>
