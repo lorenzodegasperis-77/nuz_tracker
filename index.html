@@ -408,16 +408,16 @@ const JA=['Route 29','Route 30','Route 31','Dark Cave','Sprout Tower','Route 32'
 const HA=['Route 101','Route 102','Route 103','Route 104','Petalburg Woods','Route 105','Route 106','Granite Cave','Route 107','Route 108','Route 109','Route 110','New Mauville','Route 111','Route 112','Fiery Path','Jagged Pass','Route 113','Route 114','Meteor Falls','Route 115','Route 116','Rusturf Tunnel','Route 117','Route 118','Route 119','Route 120','Route 121','Safari Zone (Hoenn)','Route 122','Mt. Pyre','Route 123','Route 124','Route 125','Shoal Cave','Route 126','Seafloor Cavern','Route 127','Route 128','Route 129','Route 130','Route 131','Route 132','Route 133','Route 134','Cave of Origin','Sky Pillar','Victory Road (Hoenn)'];
 const SA=['Route 201','Route 202','Route 203','Oreburgh Gate','Oreburgh Mine','Route 204','Ravaged Path','Route 205','Valley Windworks','Eterna Forest','Route 206','Wayward Cave','Route 207','Mt. Coronet (S)','Route 208','Route 209','Route 210 (S)','Solaceon Ruins','Route 210 (N)','Route 211','Route 212 (S)','Great Marsh','Route 212 (N)','Route 213','Valor Lakefront','Route 214','Route 215','Route 216','Route 217','Mt. Coronet (N)','Route 218','Route 219','Route 220','Route 221','Fuego Ironworks','Iron Island','Route 222','Route 223','Victory Road (Sinnoh)','Route 224','Spring Path','Turnback Cave','Route 225','Stark Mountain','Route 226','Route 227','Route 228','Route 229','Route 230'];
 const GAMES={
-  rb:{name:'Rosso/Blu',gen:1,areas:KA,gyms:[{leader:'Brock',city:'Pewter City',type:'Rock',badge:'Boulder Badge',levelCap:14},{leader:'Misty',city:'Cerulean City',type:'Water',badge:'Cascade Badge',levelCap:21},{leader:'Lt. Surge',city:'Vermilion City',type:'Electric',badge:'Thunder Badge',levelCap:24},{leader:'Erika',city:'Celadon City',type:'Grass',badge:'Rainbow Badge',levelCap:29},{leader:'Koga',city:'Fuchsia City',type:'Poison',badge:'Soul Badge',levelCap:43},{leader:'Sabrina',city:'Saffron City',type:'Psychic',badge:'Marsh Badge',levelCap:43},{leader:'Blaine',city:'Cinnabar Island',type:'Fire',badge:'Volcano Badge',levelCap:47},{leader:'Giovanni',city:'Viridian City',type:'Ground',badge:'Earth Badge',levelCap:55}],e4:[{name:'Lorelei',type:'Ice'},{name:'Bruno',type:'Fighting'},{name:'Agatha',type:'Ghost'},{name:'Lance',type:'Dragon'},{name:'Blue (Campione)',type:'Mixed'}]},
-  yellow:{name:'Giallo',gen:1,areas:KA,gyms:[{leader:'Brock',city:'Pewter City',type:'Rock',badge:'Boulder Badge',levelCap:14},{leader:'Misty',city:'Cerulean City',type:'Water',badge:'Cascade Badge',levelCap:21},{leader:'Lt. Surge',city:'Vermilion City',type:'Electric',badge:'Thunder Badge',levelCap:35},{leader:'Erika',city:'Celadon City',type:'Grass',badge:'Rainbow Badge',levelCap:32},{leader:'Koga',city:'Fuchsia City',type:'Poison',badge:'Soul Badge',levelCap:46},{leader:'Sabrina',city:'Saffron City',type:'Psychic',badge:'Marsh Badge',levelCap:50},{leader:'Blaine',city:'Cinnabar Island',type:'Fire',badge:'Volcano Badge',levelCap:54},{leader:'Giovanni',city:'Viridian City',type:'Ground',badge:'Earth Badge',levelCap:55}],e4:[{name:'Lorelei',type:'Ice'},{name:'Bruno',type:'Fighting'},{name:'Agatha',type:'Ghost'},{name:'Lance',type:'Dragon'},{name:'Blue (Campione)',type:'Mixed'}]},
-  frlg:{name:'RossoFuoco/VerdeFoglia',gen:1,areas:[...KA,'One Island','Two Island','Three Island','Four Island','Five Island','Six Island','Seven Island'],gyms:[{leader:'Brock',city:'Pewter City',type:'Rock',badge:'Boulder Badge',levelCap:14},{leader:'Misty',city:'Cerulean City',type:'Water',badge:'Cascade Badge',levelCap:21},{leader:'Lt. Surge',city:'Vermilion City',type:'Electric',badge:'Thunder Badge',levelCap:26},{leader:'Erika',city:'Celadon City',type:'Grass',badge:'Rainbow Badge',levelCap:29},{leader:'Koga',city:'Fuchsia City',type:'Poison',badge:'Soul Badge',levelCap:43},{leader:'Sabrina',city:'Saffron City',type:'Psychic',badge:'Marsh Badge',levelCap:43},{leader:'Blaine',city:'Cinnabar Island',type:'Fire',badge:'Volcano Badge',levelCap:47},{leader:'Giovanni',city:'Viridian City',type:'Ground',badge:'Earth Badge',levelCap:55}],e4:[{name:'Lorelei',type:'Ice'},{name:'Bruno',type:'Fighting'},{name:'Agatha',type:'Ghost'},{name:'Lance',type:'Dragon'},{name:'Blue (Campione)',type:'Mixed'}]},
-  gs:{name:'Oro/Argento',gen:2,areas:[...JA,...KA.map(a=>a+' ✦')],gyms:[{leader:'Falkner',city:'Violet City',type:'Flying',badge:'Zephyr Badge',levelCap:9},{leader:'Bugsy',city:'Azalea Town',type:'Bug',badge:'Hive Badge',levelCap:17},{leader:'Whitney',city:'Goldenrod City',type:'Normal',badge:'Plain Badge',levelCap:20},{leader:'Morty',city:'Ecruteak City',type:'Ghost',badge:'Fog Badge',levelCap:25},{leader:'Chuck',city:'Cianwood City',type:'Fighting',badge:'Storm Badge',levelCap:30},{leader:'Jasmine',city:'Olivine City',type:'Steel',badge:'Mineral Badge',levelCap:35},{leader:'Pryce',city:'Mahogany Town',type:'Ice',badge:'Glacier Badge',levelCap:38},{leader:'Clair',city:'Blackthorn City',type:'Dragon',badge:'Rising Badge',levelCap:44},{leader:'Brock',city:'Pewter ✦',type:'Rock',badge:'Boulder ✦',levelCap:52},{leader:'Misty',city:'Cerulean ✦',type:'Water',badge:'Cascade ✦',levelCap:56},{leader:'Lt. Surge',city:'Vermilion ✦',type:'Electric',badge:'Thunder ✦',levelCap:58},{leader:'Erika',city:'Celadon ✦',type:'Grass',badge:'Rainbow ✦',levelCap:56},{leader:'Koga',city:'Fuchsia ✦',type:'Poison',badge:'Soul ✦',levelCap:58},{leader:'Sabrina',city:'Saffron ✦',type:'Psychic',badge:'Marsh ✦',levelCap:58},{leader:'Blaine',city:'Cinnabar ✦',type:'Fire',badge:'Volcano ✦',levelCap:58},{leader:'Blue',city:'Viridian ✦',type:'Mixed',badge:'Earth ✦',levelCap:58}],e4:[{name:'Will',type:'Psychic'},{name:'Koga',type:'Poison'},{name:'Bruno',type:'Fighting'},{name:'Karen',type:'Dark'},{name:'Lance (Campione)',type:'Dragon'}]},
-  crystal:{name:'Cristallo',gen:2,areas:[...JA,...KA.map(a=>a+' ✦')],gyms:[{leader:'Falkner',city:'Violet City',type:'Flying',badge:'Zephyr Badge',levelCap:9},{leader:'Bugsy',city:'Azalea Town',type:'Bug',badge:'Hive Badge',levelCap:17},{leader:'Whitney',city:'Goldenrod City',type:'Normal',badge:'Plain Badge',levelCap:20},{leader:'Morty',city:'Ecruteak City',type:'Ghost',badge:'Fog Badge',levelCap:25},{leader:'Chuck',city:'Cianwood City',type:'Fighting',badge:'Storm Badge',levelCap:30},{leader:'Jasmine',city:'Olivine City',type:'Steel',badge:'Mineral Badge',levelCap:35},{leader:'Pryce',city:'Mahogany Town',type:'Ice',badge:'Glacier Badge',levelCap:38},{leader:'Clair',city:'Blackthorn City',type:'Dragon',badge:'Rising Badge',levelCap:44},{leader:'Brock',city:'Pewter ✦',type:'Rock',badge:'Boulder ✦',levelCap:52},{leader:'Misty',city:'Cerulean ✦',type:'Water',badge:'Cascade ✦',levelCap:56},{leader:'Lt. Surge',city:'Vermilion ✦',type:'Electric',badge:'Thunder ✦',levelCap:58},{leader:'Erika',city:'Celadon ✦',type:'Grass',badge:'Rainbow ✦',levelCap:56},{leader:'Koga',city:'Fuchsia ✦',type:'Poison',badge:'Soul ✦',levelCap:58},{leader:'Sabrina',city:'Saffron ✦',type:'Psychic',badge:'Marsh ✦',levelCap:58},{leader:'Blaine',city:'Cinnabar ✦',type:'Fire',badge:'Volcano ✦',levelCap:58},{leader:'Blue',city:'Viridian ✦',type:'Mixed',badge:'Earth ✦',levelCap:58}],e4:[{name:'Will',type:'Psychic'},{name:'Koga',type:'Poison'},{name:'Bruno',type:'Fighting'},{name:'Karen',type:'Dark'},{name:'Lance (Campione)',type:'Dragon'}]},
-  hgss:{name:'HeartGold/SoulSilver',gen:2,areas:[...JA,...KA.map(a=>a+' ✦')],gyms:[{leader:'Falkner',city:'Violet City',type:'Flying',badge:'Zephyr Badge',levelCap:9},{leader:'Bugsy',city:'Azalea Town',type:'Bug',badge:'Hive Badge',levelCap:17},{leader:'Whitney',city:'Goldenrod City',type:'Normal',badge:'Plain Badge',levelCap:20},{leader:'Morty',city:'Ecruteak City',type:'Ghost',badge:'Fog Badge',levelCap:25},{leader:'Chuck',city:'Cianwood City',type:'Fighting',badge:'Storm Badge',levelCap:30},{leader:'Jasmine',city:'Olivine City',type:'Steel',badge:'Mineral Badge',levelCap:35},{leader:'Pryce',city:'Mahogany Town',type:'Ice',badge:'Glacier Badge',levelCap:38},{leader:'Clair',city:'Blackthorn City',type:'Dragon',badge:'Rising Badge',levelCap:44},{leader:'Brock',city:'Pewter ✦',type:'Rock',badge:'Boulder ✦',levelCap:52},{leader:'Misty',city:'Cerulean ✦',type:'Water',badge:'Cascade ✦',levelCap:56},{leader:'Lt. Surge',city:'Vermilion ✦',type:'Electric',badge:'Thunder ✦',levelCap:58},{leader:'Erika',city:'Celadon ✦',type:'Grass',badge:'Rainbow ✦',levelCap:56},{leader:'Janine',city:'Fuchsia ✦',type:'Poison',badge:'Soul ✦',levelCap:58},{leader:'Sabrina',city:'Saffron ✦',type:'Psychic',badge:'Marsh ✦',levelCap:58},{leader:'Blaine',city:'Cinnabar ✦',type:'Fire',badge:'Volcano ✦',levelCap:58},{leader:'Blue',city:'Viridian ✦',type:'Mixed',badge:'Earth ✦',levelCap:58}],e4:[{name:'Will',type:'Psychic'},{name:'Koga',type:'Poison'},{name:'Bruno',type:'Fighting'},{name:'Karen',type:'Dark'},{name:'Lance (Campione)',type:'Dragon'}]},
-  rs:{name:'Rubino/Zaffiro',gen:3,areas:HA,gyms:[{leader:'Roxanne',city:'Rustboro City',type:'Rock',badge:'Stone Badge',levelCap:15},{leader:'Brawly',city:'Dewford Town',type:'Fighting',badge:'Knuckle Badge',levelCap:18},{leader:'Wattson',city:'Mauville City',type:'Electric',badge:'Dynamo Badge',levelCap:22},{leader:'Flannery',city:'Lavaridge Town',type:'Fire',badge:'Heat Badge',levelCap:27},{leader:'Norman',city:'Petalburg City',type:'Normal',badge:'Balance Badge',levelCap:31},{leader:'Winona',city:'Fortree City',type:'Flying',badge:'Feather Badge',levelCap:33},{leader:'Tate & Liza',city:'Mossdeep City',type:'Psychic',badge:'Mind Badge',levelCap:42},{leader:'Wallace',city:'Sootopolis City',type:'Water',badge:'Rain Badge',levelCap:46}],e4:[{name:'Sidney',type:'Dark'},{name:'Phoebe',type:'Ghost'},{name:'Glacia',type:'Ice'},{name:'Drake',type:'Dragon'},{name:'Steven (Campione)',type:'Steel'}]},
-  emerald:{name:'Smeraldo',gen:3,areas:HA,gyms:[{leader:'Roxanne',city:'Rustboro City',type:'Rock',badge:'Stone Badge',levelCap:15},{leader:'Brawly',city:'Dewford Town',type:'Fighting',badge:'Knuckle Badge',levelCap:18},{leader:'Wattson',city:'Mauville City',type:'Electric',badge:'Dynamo Badge',levelCap:22},{leader:'Flannery',city:'Lavaridge Town',type:'Fire',badge:'Heat Badge',levelCap:27},{leader:'Norman',city:'Petalburg City',type:'Normal',badge:'Balance Badge',levelCap:31},{leader:'Winona',city:'Fortree City',type:'Flying',badge:'Feather Badge',levelCap:33},{leader:'Tate & Liza',city:'Mossdeep City',type:'Psychic',badge:'Mind Badge',levelCap:42},{leader:'Juan',city:'Sootopolis City',type:'Water',badge:'Rain Badge',levelCap:46}],e4:[{name:'Sidney',type:'Dark'},{name:'Phoebe',type:'Ghost'},{name:'Glacia',type:'Ice'},{name:'Drake',type:'Dragon'},{name:'Wallace (Campione)',type:'Water'}]},
-  dp:{name:'Diamante/Perla',gen:4,areas:SA,gyms:[{leader:'Roark',city:'Oreburgh City',type:'Rock',badge:'Coal Badge',levelCap:15},{leader:'Gardenia',city:'Eterna City',type:'Grass',badge:'Forest Badge',levelCap:22},{leader:'Maylene',city:'Veilstone City',type:'Fighting',badge:'Cobble Badge',levelCap:28},{leader:'Crasher Wake',city:'Pastoria City',type:'Water',badge:'Fen Badge',levelCap:34},{leader:'Fantina',city:'Hearthome City',type:'Ghost',badge:'Relic Badge',levelCap:36},{leader:'Byron',city:'Canalave City',type:'Steel',badge:'Mine Badge',levelCap:40},{leader:'Candice',city:'Snowpoint City',type:'Ice',badge:'Icicle Badge',levelCap:44},{leader:'Volkner',city:'Sunyshore City',type:'Electric',badge:'Beacon Badge',levelCap:50}],e4:[{name:'Aaron',type:'Bug'},{name:'Bertha',type:'Ground'},{name:'Flint',type:'Fire'},{name:'Lucian',type:'Psychic'},{name:'Cynthia (Campione)',type:'Mixed'}]},
-  platinum:{name:'Platino',gen:4,areas:[...SA,'Distortion World','Flower Paradise','Fullmoon Island','Newmoon Island'],gyms:[{leader:'Roark',city:'Oreburgh City',type:'Rock',badge:'Coal Badge',levelCap:15},{leader:'Gardenia',city:'Eterna City',type:'Grass',badge:'Forest Badge',levelCap:22},{leader:'Fantina',city:'Hearthome City',type:'Ghost',badge:'Relic Badge',levelCap:24},{leader:'Maylene',city:'Veilstone City',type:'Fighting',badge:'Cobble Badge',levelCap:28},{leader:'Crasher Wake',city:'Pastoria City',type:'Water',badge:'Fen Badge',levelCap:34},{leader:'Byron',city:'Canalave City',type:'Steel',badge:'Mine Badge',levelCap:40},{leader:'Candice',city:'Snowpoint City',type:'Ice',badge:'Icicle Badge',levelCap:44},{leader:'Volkner',city:'Sunyshore City',type:'Electric',badge:'Beacon Badge',levelCap:50}],e4:[{name:'Aaron',type:'Bug'},{name:'Bertha',type:'Ground'},{name:'Flint',type:'Fire'},{name:'Lucian',type:'Psychic'},{name:'Cynthia (Campione)',type:'Mixed'}]},
+  rb:{name:'Red/Blue',gen:1,areas:KA,gyms:[{leader:'Brock',city:'Pewter City',type:'Rock',badge:'Boulder Badge',levelCap:14},{leader:'Misty',city:'Cerulean City',type:'Water',badge:'Cascade Badge',levelCap:21},{leader:'Lt. Surge',city:'Vermilion City',type:'Electric',badge:'Thunder Badge',levelCap:24},{leader:'Erika',city:'Celadon City',type:'Grass',badge:'Rainbow Badge',levelCap:29},{leader:'Koga',city:'Fuchsia City',type:'Poison',badge:'Soul Badge',levelCap:43},{leader:'Sabrina',city:'Saffron City',type:'Psychic',badge:'Marsh Badge',levelCap:43},{leader:'Blaine',city:'Cinnabar Island',type:'Fire',badge:'Volcano Badge',levelCap:47},{leader:'Giovanni',city:'Viridian City',type:'Ground',badge:'Earth Badge',levelCap:50}],e4:[{name:'Lorelei',type:'Ice',levelCap:56},{name:'Bruno',type:'Fighting',levelCap:58},{name:'Agatha',type:'Ghost',levelCap:60},{name:'Lance',type:'Dragon',levelCap:62},{name:'Blue (Champion)',type:'Mixed',levelCap:65}]},
+  yellow:{name:'Yellow',gen:1,areas:KA,gyms:[{leader:'Brock',city:'Pewter City',type:'Rock',badge:'Boulder Badge',levelCap:12},{leader:'Misty',city:'Cerulean City',type:'Water',badge:'Cascade Badge',levelCap:21},{leader:'Lt. Surge',city:'Vermilion City',type:'Electric',badge:'Thunder Badge',levelCap:28},{leader:'Erika',city:'Celadon City',type:'Grass',badge:'Rainbow Badge',levelCap:32},{leader:'Koga',city:'Fuchsia City',type:'Poison',badge:'Soul Badge',levelCap:50},{leader:'Sabrina',city:'Saffron City',type:'Psychic',badge:'Marsh Badge',levelCap:50},{leader:'Blaine',city:'Cinnabar Island',type:'Fire',badge:'Volcano Badge',levelCap:54},{leader:'Giovanni',city:'Viridian City',type:'Ground',badge:'Earth Badge',levelCap:55}],e4:[{name:'Lorelei',type:'Ice',levelCap:56},{name:'Bruno',type:'Fighting',levelCap:58},{name:'Agatha',type:'Ghost',levelCap:60},{name:'Lance',type:'Dragon',levelCap:62},{name:'Blue (Champion)',type:'Mixed',levelCap:65}]},
+  frlg:{name:'FireRed/LeafGreen',gen:1,areas:[...KA,'One Island','Two Island','Three Island','Four Island','Five Island','Six Island','Seven Island'],gyms:[{leader:'Brock',city:'Pewter City',type:'Rock',badge:'Boulder Badge',levelCap:14},{leader:'Misty',city:'Cerulean City',type:'Water',badge:'Cascade Badge',levelCap:21},{leader:'Lt. Surge',city:'Vermilion City',type:'Electric',badge:'Thunder Badge',levelCap:24},{leader:'Erika',city:'Celadon City',type:'Grass',badge:'Rainbow Badge',levelCap:29},{leader:'Koga',city:'Fuchsia City',type:'Poison',badge:'Soul Badge',levelCap:43},{leader:'Sabrina',city:'Saffron City',type:'Psychic',badge:'Marsh Badge',levelCap:43},{leader:'Blaine',city:'Cinnabar Island',type:'Fire',badge:'Volcano Badge',levelCap:47},{leader:'Giovanni',city:'Viridian City',type:'Ground',badge:'Earth Badge',levelCap:50}],e4:[{name:'Lorelei',type:'Ice',levelCap:54},{name:'Bruno',type:'Fighting',levelCap:56},{name:'Agatha',type:'Ghost',levelCap:58},{name:'Lance',type:'Dragon',levelCap:60},{name:'Blue (Champion)',type:'Mixed',levelCap:63}]},
+  gs:{name:'Gold/Silver',gen:2,areas:[...JA,...KA.map(a=>a+' ✦')],gyms:[{leader:'Falkner',city:'Violet City',type:'Flying',badge:'Zephyr Badge',levelCap:9},{leader:'Bugsy',city:'Azalea Town',type:'Bug',badge:'Hive Badge',levelCap:16},{leader:'Whitney',city:'Goldenrod City',type:'Normal',badge:'Plain Badge',levelCap:20},{leader:'Morty',city:'Ecruteak City',type:'Ghost',badge:'Fog Badge',levelCap:25},{leader:'Chuck',city:'Cianwood City',type:'Fighting',badge:'Storm Badge',levelCap:30},{leader:'Jasmine',city:'Olivine City',type:'Steel',badge:'Mineral Badge',levelCap:35},{leader:'Pryce',city:'Mahogany Town',type:'Ice',badge:'Glacier Badge',levelCap:31},{leader:'Clair',city:'Blackthorn City',type:'Dragon',badge:'Rising Badge',levelCap:40},{leader:'Brock',city:'Pewter ✦',type:'Rock',badge:'Boulder ✦',levelCap:44},{leader:'Misty',city:'Cerulean ✦',type:'Water',badge:'Cascade ✦',levelCap:47},{leader:'Lt. Surge',city:'Vermilion ✦',type:'Electric',badge:'Thunder ✦',levelCap:45},{leader:'Erika',city:'Celadon ✦',type:'Grass',badge:'Rainbow ✦',levelCap:46},{leader:'Koga',city:'Fuchsia ✦',type:'Poison',badge:'Soul ✦',levelCap:39},{leader:'Sabrina',city:'Saffron ✦',type:'Psychic',badge:'Marsh ✦',levelCap:48},{leader:'Blaine',city:'Cinnabar ✦',type:'Fire',badge:'Volcano ✦',levelCap:50},{leader:'Blue',city:'Viridian ✦',type:'Mixed',badge:'Earth ✦',levelCap:58}],e4:[{name:'Will',type:'Psychic',levelCap:42},{name:'Koga',type:'Poison',levelCap:44},{name:'Bruno',type:'Fighting',levelCap:46},{name:'Karen',type:'Dark',levelCap:47},{name:'Lance (Champion)',type:'Dragon',levelCap:50}]},
+  crystal:{name:'Crystal',gen:2,areas:[...JA,...KA.map(a=>a+' ✦')],gyms:[{leader:'Falkner',city:'Violet City',type:'Flying',badge:'Zephyr Badge',levelCap:9},{leader:'Bugsy',city:'Azalea Town',type:'Bug',badge:'Hive Badge',levelCap:16},{leader:'Whitney',city:'Goldenrod City',type:'Normal',badge:'Plain Badge',levelCap:20},{leader:'Morty',city:'Ecruteak City',type:'Ghost',badge:'Fog Badge',levelCap:25},{leader:'Chuck',city:'Cianwood City',type:'Fighting',badge:'Storm Badge',levelCap:30},{leader:'Jasmine',city:'Olivine City',type:'Steel',badge:'Mineral Badge',levelCap:35},{leader:'Pryce',city:'Mahogany Town',type:'Ice',badge:'Glacier Badge',levelCap:31},{leader:'Clair',city:'Blackthorn City',type:'Dragon',badge:'Rising Badge',levelCap:40},{leader:'Brock',city:'Pewter ✦',type:'Rock',badge:'Boulder ✦',levelCap:44},{leader:'Misty',city:'Cerulean ✦',type:'Water',badge:'Cascade ✦',levelCap:47},{leader:'Lt. Surge',city:'Vermilion ✦',type:'Electric',badge:'Thunder ✦',levelCap:45},{leader:'Erika',city:'Celadon ✦',type:'Grass',badge:'Rainbow ✦',levelCap:46},{leader:'Koga',city:'Fuchsia ✦',type:'Poison',badge:'Soul ✦',levelCap:39},{leader:'Sabrina',city:'Saffron ✦',type:'Psychic',badge:'Marsh ✦',levelCap:48},{leader:'Blaine',city:'Cinnabar ✦',type:'Fire',badge:'Volcano ✦',levelCap:50},{leader:'Blue',city:'Viridian ✦',type:'Mixed',badge:'Earth ✦',levelCap:58}],e4:[{name:'Will',type:'Psychic',levelCap:42},{name:'Koga',type:'Poison',levelCap:44},{name:'Bruno',type:'Fighting',levelCap:46},{name:'Karen',type:'Dark',levelCap:47},{name:'Lance (Champion)',type:'Dragon',levelCap:50}]},
+  hgss:{name:'HeartGold/SoulSilver',gen:2,areas:[...JA,...KA.map(a=>a+' ✦')],gyms:[{leader:'Falkner',city:'Violet City',type:'Flying',badge:'Zephyr Badge',levelCap:13},{leader:'Bugsy',city:'Azalea Town',type:'Bug',badge:'Hive Badge',levelCap:17},{leader:'Whitney',city:'Goldenrod City',type:'Normal',badge:'Plain Badge',levelCap:19},{leader:'Morty',city:'Ecruteak City',type:'Ghost',badge:'Fog Badge',levelCap:25},{leader:'Chuck',city:'Cianwood City',type:'Fighting',badge:'Storm Badge',levelCap:31},{leader:'Jasmine',city:'Olivine City',type:'Steel',badge:'Mineral Badge',levelCap:35},{leader:'Pryce',city:'Mahogany Town',type:'Ice',badge:'Glacier Badge',levelCap:34},{leader:'Clair',city:'Blackthorn City',type:'Dragon',badge:'Rising Badge',levelCap:41},{leader:'Brock',city:'Pewter ✦',type:'Rock',badge:'Boulder ✦',levelCap:54},{leader:'Misty',city:'Cerulean ✦',type:'Water',badge:'Cascade ✦',levelCap:54},{leader:'Lt. Surge',city:'Vermilion ✦',type:'Electric',badge:'Thunder ✦',levelCap:53},{leader:'Erika',city:'Celadon ✦',type:'Grass',badge:'Rainbow ✦',levelCap:56},{leader:'Janine',city:'Fuchsia ✦',type:'Poison',badge:'Soul ✦',levelCap:50},{leader:'Sabrina',city:'Saffron ✦',type:'Psychic',badge:'Marsh ✦',levelCap:55},{leader:'Blaine',city:'Cinnabar ✦',type:'Fire',badge:'Volcano ✦',levelCap:59},{leader:'Blue',city:'Viridian ✦',type:'Mixed',badge:'Earth ✦',levelCap:60}],e4:[{name:'Will',type:'Psychic',levelCap:42},{name:'Koga',type:'Poison',levelCap:44},{name:'Bruno',type:'Fighting',levelCap:46},{name:'Karen',type:'Dark',levelCap:47},{name:'Lance (Champion)',type:'Dragon',levelCap:50}]},
+  rs:{name:'Ruby/Sapphire',gen:3,areas:HA,gyms:[{leader:'Roxanne',city:'Rustboro City',type:'Rock',badge:'Stone Badge',levelCap:15},{leader:'Brawly',city:'Dewford Town',type:'Fighting',badge:'Knuckle Badge',levelCap:18},{leader:'Wattson',city:'Mauville City',type:'Electric',badge:'Dynamo Badge',levelCap:23},{leader:'Flannery',city:'Lavaridge Town',type:'Fire',badge:'Heat Badge',levelCap:28},{leader:'Norman',city:'Petalburg City',type:'Normal',badge:'Balance Badge',levelCap:31},{leader:'Winona',city:'Fortree City',type:'Flying',badge:'Feather Badge',levelCap:33},{leader:'Tate & Liza',city:'Mossdeep City',type:'Psychic',badge:'Mind Badge',levelCap:42},{leader:'Wallace',city:'Sootopolis City',type:'Water',badge:'Rain Badge',levelCap:43}],e4:[{name:'Sidney',type:'Dark',levelCap:49},{name:'Phoebe',type:'Ghost',levelCap:51},{name:'Glacia',type:'Ice',levelCap:53},{name:'Drake',type:'Dragon',levelCap:55},{name:'Steven (Champion)',type:'Steel',levelCap:58}]},
+  emerald:{name:'Emerald',gen:3,areas:HA,gyms:[{leader:'Roxanne',city:'Rustboro City',type:'Rock',badge:'Stone Badge',levelCap:15},{leader:'Brawly',city:'Dewford Town',type:'Fighting',badge:'Knuckle Badge',levelCap:19},{leader:'Wattson',city:'Mauville City',type:'Electric',badge:'Dynamo Badge',levelCap:24},{leader:'Flannery',city:'Lavaridge Town',type:'Fire',badge:'Heat Badge',levelCap:29},{leader:'Norman',city:'Petalburg City',type:'Normal',badge:'Balance Badge',levelCap:31},{leader:'Winona',city:'Fortree City',type:'Flying',badge:'Feather Badge',levelCap:33},{leader:'Tate & Liza',city:'Mossdeep City',type:'Psychic',badge:'Mind Badge',levelCap:42},{leader:'Juan',city:'Sootopolis City',type:'Water',badge:'Rain Badge',levelCap:46}],e4:[{name:'Sidney',type:'Dark',levelCap:49},{name:'Phoebe',type:'Ghost',levelCap:51},{name:'Glacia',type:'Ice',levelCap:53},{name:'Drake',type:'Dragon',levelCap:55},{name:'Wallace (Champion)',type:'Water',levelCap:58}]},
+  dp:{name:'Diamond/Perl',gen:4,areas:SA,gyms:[{leader:'Roark',city:'Oreburgh City',type:'Rock',badge:'Coal Badge',levelCap:14},{leader:'Gardenia',city:'Eterna City',type:'Grass',badge:'Forest Badge',levelCap:22},{leader:'Maylene',city:'Veilstone City',type:'Fighting',badge:'Cobble Badge',levelCap:30},{leader:'Crasher Wake',city:'Pastoria City',type:'Water',badge:'Fen Badge',levelCap:30},{leader:'Fantina',city:'Hearthome City',type:'Ghost',badge:'Relic Badge',levelCap:36},{leader:'Byron',city:'Canalave City',type:'Steel',badge:'Mine Badge',levelCap:39},{leader:'Candice',city:'Snowpoint City',type:'Ice',badge:'Icicle Badge',levelCap:42},{leader:'Volkner',city:'Sunyshore City',type:'Electric',badge:'Beacon Badge',levelCap:49}],e4:[{name:'Aaron',type:'Bug',levelCap:57},{name:'Bertha',type:'Ground',levelCap:59},{name:'Flint',type:'Fire',levelCap:61},{name:'Lucian',type:'Psychic',levelCap:63},{name:'Cynthia (Champion)',type:'Mixed',levelCap:66}]},
+  platinum:{name:'Platinum',gen:4,areas:[...SA,'Distortion World','Flower Paradise','Fullmoon Island','Newmoon Island'],gyms:[{leader:'Roark',city:'Oreburgh City',type:'Rock',badge:'Coal Badge',levelCap:14},{leader:'Gardenia',city:'Eterna City',type:'Grass',badge:'Forest Badge',levelCap:22},{leader:'Fantina',city:'Hearthome City',type:'Ghost',badge:'Relic Badge',levelCap:26},{leader:'Maylene',city:'Veilstone City',type:'Fighting',badge:'Cobble Badge',levelCap:32},{leader:'Crasher Wake',city:'Pastoria City',type:'Water',badge:'Fen Badge',levelCap:37},{leader:'Byron',city:'Canalave City',type:'Steel',badge:'Mine Badge',levelCap:41},{leader:'Candice',city:'Snowpoint City',type:'Ice',badge:'Icicle Badge',levelCap:44},{leader:'Volkner',city:'Sunyshore City',type:'Electric',badge:'Beacon Badge',levelCap:50}],e4:[{name:'Aaron',type:'Bug',levelCap:53},{name:'Bertha',type:'Ground',levelCap:55},{name:'Flint',type:'Fire',levelCap:57},{name:'Lucian',type:'Psychic',levelCap:59},{name:'Cynthia (Champion)',type:'Mixed',levelCap:62}]},
 };
 let CUSTOM_GAMES={};
 
@@ -644,12 +644,12 @@ function renderHome(){
       <div class="home-logo">Nuzlocke<span>.</span>Log</div>
       <div class="home-sub"><strong>Campaign Tracker</strong></div>
       <div class="home-tools">
-        <button class="btn btn-o btn-sm" data-a="open-game-manager">Giochi</button>
-        <button class="btn btn-o btn-sm" data-a="import-run">${I.import} Importa</button>
+        <button class="btn btn-o btn-sm" data-a="open-game-manager">Games</button>
+        <button class="btn btn-o btn-sm" data-a="import-run">${I.import} Import</button>
         <button class="btn-i" data-a="toggle-dark" title="Dark mode">${isDark?I.sun:I.moon}</button>
       </div>
     </div>
-    <button class="btn btn-r" data-a="new-run">${I.plus} Nuova Run</button>
+    <button class="btn btn-r" data-a="new-run">${I.plus} New Run</button>
   </div>
   ${!runs.length?`<div class="empty"><h2>Nessuna run attiva</h2><p>Inizia la tua prima campagna. Buona fortuna.</p></div>`
   :`<div class="runs-grid">${runs.map(r=>{
@@ -664,7 +664,7 @@ function renderHome(){
       <div class="rc-stats">
         <span class="rc-stat"><span class="dot dot-g"></span>${party} party</span>
         <span class="rc-stat"><span class="dot dot-y"></span>${box} box</span>
-        <span class="rc-stat"><span class="dot dot-r"></span>${dead} morti</span>
+        <span class="rc-stat"><span class="dot dot-r"></span>${dead} deaths</span>
         <span class="rc-stat">${I.badge} ${badges}/${g?g.gyms.length:0}</span>
       </div>
       <div style="position:absolute;top:12px;right:10px"><button class="btn-i" data-a="del-run" data-rid="${r.id}">${I.trash}</button></div>
@@ -678,7 +678,7 @@ function renderTracker(){
   const r=run();if(!r)return renderHome();
   const g=game();
   const isDark=document.body.classList.contains('dark');
-  const tabs=[{id:'routes',l:'AREE',ic:I.map},{id:'squad',l:'POKEMON',ic:I.party},{id:'gyms',l:'PALESTRE',ic:I.badge}];
+  const tabs=[{id:'routes',l:'AREAS',ic:I.map},{id:'squad',l:'POKEMON',ic:I.party},{id:'gyms',l:'GYMS',ic:I.badge}];
   let content='';
   if(S.tab==='routes')content=renderRoutes(r,g);
   else if(S.tab==='squad')content=renderSquad(r,g);
@@ -692,15 +692,15 @@ function renderTracker(){
     <div class="nav-r">
       <button class="btn-i" data-a="toggle-dark" title="Dark mode">${isDark?I.sun:I.moon}</button>
       <span class="run-chip">${r.name}</span>
-      <button class="btn btn-o btn-sm" data-a="export-run" title="Esporta run">${I.export} Esporta</button>
+      <button class="btn btn-o btn-sm" data-a="export-run" title="Esporta run">${I.export} Export</button>
       <button class="btn btn-o btn-sm" data-a="reset-run">${I.refresh} Reset</button>
     </div>
   </nav>
   ${S.tab==='squad'?`<div class="stabs">
-    <button class="stab${S.stab==='party'||!S.stab?' on':''}" data-a="set-stab" data-stab="party">Squadra</button>
+    <button class="stab${S.stab==='party'||!S.stab?' on':''}" data-a="set-stab" data-stab="party">Team</button>
     <button class="stab${S.stab==='box'?' on':''}" data-a="set-stab" data-stab="box">Box</button>
-    <button class="stab${S.stab==='grave'?' on':''}" data-a="set-stab" data-stab="grave">Cimitero</button>
-    <button class="stab${S.stab==='analysis'?' on':''}" data-a="set-stab" data-stab="analysis">Analisi</button>
+    <button class="stab${S.stab==='grave'?' on':''}" data-a="set-stab" data-stab="grave">Graveyard</button>
+    <button class="stab${S.stab==='analysis'?' on':''}" data-a="set-stab" data-stab="analysis">Analysis</button>
   </div>`:''}
   <div class="content">${content}</div>
   ${botNav}
@@ -711,10 +711,10 @@ function renderTracker(){
 function renderRoutes(r,g){
   if(!g)return'';
   const done=g.areas.filter(a=>r.encounters[a]?.status).length;
-  const ENC=[{id:'caught',l:'Catturato',c:'ec'},{id:'defeated',l:'Sconfitto',c:'ed'},{id:'traded',l:'Scambiato',c:'et'},{id:'gifted',l:'Regalato',c:'eg'},{id:'missed',l:'Mancato',c:'em'}];
+  const ENC=[{id:'caught',l:'Captured',c:'ec'},{id:'defeated',l:'Defeated',c:'ed'},{id:'traded',l:'Traded',c:'et'},{id:'gifted',l:'Gifted',c:'eg'},{id:'missed',l:'Missed',c:'em'}];
   const POS=['caught','traded','gifted'];
   const rf=S.rFilters;
-  const STATUS_CHIPS=[{id:'',l:'Tutti'},{id:'caught',l:'Catturato'},{id:'defeated',l:'Sconfitto'},{id:'traded',l:'Scambiato'},{id:'gifted',l:'Regalato'},{id:'missed',l:'Mancato'},{id:'__none',l:'Non incontrato'}];
+  const STATUS_CHIPS=[{id:'',l:'All'},{id:'caught',l:'Captured'},{id:'defeated',l:'Defeated'},{id:'traded',l:'Traded'},{id:'gifted',l:'Gifted'},{id:'missed',l:'Missed'},{id:'__none',l:'Not met'}];
   const filteredAreas=g.areas.filter(area=>{
     const enc=r.encounters[area]||{};
     const st=enc.status||null;
@@ -735,9 +735,9 @@ function renderRoutes(r,g){
       ${STATUS_CHIPS.map(c=>`<button class="fchip${rf.status===c.id?' on':''}" data-a="rf-status" data-v="${c.id}">${c.l}</button>`).join('')}
     </div>
     <div class="filter-row">
-      <span class="filter-label">Tipo</span>
+      <span class="filter-label">Type</span>
       <select class="filter-type-sel" data-a="rf-type">
-        <option value="">Tutti i tipi</option>
+        <option value="">All types</option>
         ${TYPES.map(t=>`<option value="${t}" ${rf.type===t?'selected':''}>${t}</option>`).join('')}
       </select>
       ${rf.status||rf.type?`<button class="fchip" data-a="rf-reset" style="margin-left:4px">✕ Reset</button>`:''}
@@ -745,11 +745,11 @@ function renderRoutes(r,g){
   </div>`;
   return`<div>
   <div class="sh">
-    <span class="sh-t">Aree & Incontri</span><span class="sh-c">${done}/${g.areas.length}</span>
-    <button class="btn btn-o btn-sm" data-a="add-poke" data-st="party" style="margin-left:auto">${I.plus} Aggiungi Pkm manuale</button>
+    <span class="sh-t">Areas & encounters</span><span class="sh-c">${done}/${g.areas.length}</span>
+    <button class="btn btn-o btn-sm" data-a="add-poke" data-st="party" style="margin-left:auto">${I.plus} Manual add Pkm</button>
   </div>
   ${filtersHTML}
-  ${filteredAreas.length===0?`<div class="empty" style="padding:40px 20px"><h2 style="font-size:1rem">Nessuna area trovata</h2><p>Prova a cambiare i filtri.</p></div>`:''}
+  ${filteredAreas.length===0?`<div class="empty" style="padding:40px 20px"><h2 style="font-size:1rem">Nessuna area trovata</h2><p>Try changing filters.</p></div>`:''}
   <div class="rl">${filteredAreas.map(area=>{
     const enc=r.encounters[area]||{};
     const st=enc.status||null;
@@ -780,10 +780,10 @@ function renderSquad(r,g){
 function renderPartyOnly(r,g){
   const party=(r.pokemon||[]).filter(p=>p.status==='party');
   return`<div>
-  <div class="sh"><span class="sh-t">Squadra</span><span class="sh-c">${party.length}/6</span>
-    <button class="btn btn-r btn-sm" data-a="add-poke" data-st="party" style="margin-left:auto">${I.plus} Aggiungi</button>
+  <div class="sh"><span class="sh-t">Team</span><span class="sh-c">${party.length}/6</span>
+    <button class="btn btn-r btn-sm" data-a="add-poke" data-st="party" style="margin-left:auto">${I.plus} Add</button>
   </div>
-  <div class="pgrid">${party.map(p=>pokeCard(p,g)).join('')}${!party.length?`<p style="padding:20px;color:var(--t3);font-size:13px">Nessun Pokémon in squadra.</p>`:''}</div>
+  <div class="pgrid">${party.map(p=>pokeCard(p,g)).join('')}${!party.length?`<p style="padding:20px;color:var(--t3);font-size:13px">No Pokémon in your team.</p>`:''}</div>
 </div>`;
 }
 function renderBoxOnly(r,g){
@@ -792,7 +792,7 @@ function renderBoxOnly(r,g){
   <div class="sh"><span class="sh-t">Box</span><span class="sh-c">${box.length}</span>
     <button class="btn-g btn-sm" data-a="add-poke" data-st="box" style="margin-left:auto">${I.plus} Box</button>
   </div>
-  <div class="pgrid">${box.map(p=>pokeCard(p,g)).join('')}${!box.length?`<p style="padding:20px;color:var(--t3);font-size:13px">Nessun Pokémon nel Box.</p>`:''}</div>
+  <div class="pgrid">${box.map(p=>pokeCard(p,g)).join('')}${!box.length?`<p style="padding:20px;color:var(--t3);font-size:13px">No Pokémon in your Box.</p>`:''}</div>
 </div>`;
 }
 function pokeCard(p,g){
@@ -820,9 +820,9 @@ function pokeCard(p,g){
 /* GRAVEYARD */
 function renderGrave(r){
   const dead=(r.pokemon||[]).filter(p=>p.status==='dead');
-  if(!dead.length)return`<div class="empty"><h2>Nessun caduto</h2><p>Ottimo lavoro, continua così.</p></div>`;
+  if(!dead.length)return`<div class="empty"><h2>No fainted Pokémon</h2><p>Good job, keep it up.</p></div>`;
   return`<div>
-  <div class="sh"><span class="sh-t">Caduti in battaglia</span><span class="sh-c">${dead.length}</span></div>
+  <div class="sh"><span class="sh-t">Pokémon fainted</span><span class="sh-c">${dead.length}</span></div>
   <div class="ggrid">${dead.map(p=>`<div class="gc">
     ${p.sprite?`<img class="gsprite" src="${p.sprite}">`:`<div style="height:66px;display:flex;align-items:center;justify-content:center;font-size:24px;color:#fca5a5">${I.skull}</div>`}
     <div class="gname">${p.nickname||p.speciesName}</div>
@@ -839,7 +839,7 @@ function renderGrave(r){
 /* ANALYSIS */
 function renderAnalysis(r){
   const party=(r.pokemon||[]).filter(p=>p.status==='party'&&p.types&&p.types.length>0);
-  if(!party.length)return`<div class="empty"><h2>Squadra vuota</h2><p>Aggiungi Pokémon alla squadra per l'analisi.</p></div>`;
+  if(!party.length)return`<div class="empty"><h2>Empty team</h2><p>Add Pokémon to your team for the analysis.</p></div>`;
   const hasDB=Object.keys(S.movesDB).length>0;
   const teamCov=hasDB?getTeamCoverage(party):{};
 
@@ -854,12 +854,12 @@ function renderAnalysis(r){
   };
 
   const header=`<thead><tr>
-    <th class="dm-th-label">Tipo ↓</th>
+    <th class="dm-th-label">Type ↓</th>
     ${party.map(p=>`<th class="dm-th-poke">
       ${p.thumbnail||p.sprite?`<img class="dm-poke-spr" src="${p.thumbnail||p.sprite}">`:`<div class="dm-poke-spr" style="background:var(--bd);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--t3);font-size:16px">${I.party}</div>`}
       <div class="dm-poke-nm">${p.nickname||p.speciesName}</div>
     </th>`).join('')}
-    <th class="dm-th-tot">Tot.<br>Deb.</th>
+    <th class="dm-th-tot">Tot.<br>Weak.</th>
     <th class="dm-th-tot">Tot.<br>Res.</th>
   </tr></thead>`;
 
@@ -882,15 +882,15 @@ function renderAnalysis(r){
   const teamWeak=TYPES.filter(t=>party.filter(p=>defMult(t,p.types)>=2).length>=2&&!teamX4.includes(t));
   const alertsHTML=(teamX4.length||teamWeak.length)?`<div class="dm-summary">
     ${teamX4.map(t=>`<div class="dm-sum-danger">×4 ${tb(t,true)} — vulnerabilità critica</div>`).join('')}
-    ${teamWeak.map(t=>`<div class="dm-sum-warn">×2 ${tb(t,true)} — ${party.filter(p=>defMult(t,p.types)>=2).length} Pokémon colpiti</div>`).join('')}
+    ${teamWeak.map(t=>`<div class="dm-sum-warn">×2 ${tb(t,true)} — ${party.filter(p=>defMult(t,p.types)>=2).length} Pokémon weakness</div>`).join('')}
   </div>`:
-  `<p style="font-size:11px;color:var(--t3);margin-bottom:10px">Nessuna debolezza critica comune.</p>`;
+  `<p style="font-size:11px;color:var(--t3);margin-bottom:10px">No shared weaknesses.</p>`;
 
   const matrixHTML=`<div class="dm-wrap"><table class="dm-table">${header}<tbody>${rows}</tbody></table></div>`;
 
   // ── Offensive Coverage ────────────────────────────────────────────────────
   const covSec=!hasDB
-    ?`<div class="no-db">⚠ Nessuna mossa trovata.</div>`
+    ?`<div class="no-db">No move found.</div>`
     :`<div>
     <p style="font-size:12px;color:var(--t2);margin-bottom:14px">Tipi che il team riesce a colpire SE. <span style="color:#15803d;font-weight:800">Verde</span> = coperto, <span style="color:#dc2626;font-weight:800">Rosso</span> = scoperto.</p>
     <div class="cov-grid">${TYPES.map(t=>{
@@ -899,7 +899,7 @@ function renderAnalysis(r){
         ${tb(t,true)}<div class="cov-cnt ${cnt>0?'yes':'no'}">${cnt>0?`${cnt} pkm`:'—'}</div>
       </div>`;
     }).join('')}</div>
-    <h4 style="font-size:.72rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--t2);margin:16px 0 10px">Copertura per Pokémon</h4>
+    <h4 style="font-size:.72rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--t2);margin:16px 0 10px">Pokémon Coverage</h4>
     ${party.map(p=>{
       const covs=getMoveCoverage(p).filter(c=>c.mv.trim());
       return`<div class="poke-cov">
@@ -908,10 +908,10 @@ function renderAnalysis(r){
           <div><div class="pc-nm">${p.nickname||p.speciesName}</div>
           <div style="display:flex;gap:3px;margin-top:2px">${(p.types||[]).map(t=>tb(t,true)).join('')}</div></div>
         </div>
-        ${!covs.length?`<p class="mv-none">Nessuna mossa inserita</p>`:covs.map(c=>
+        ${!covs.length?`<p class="mv-none">No move selected</p>`:covs.map(c=>
         `<div class="mv-row">
           <div class="mv-nm">${c.type?tb(c.type,true):''} <span>${c.mv}</span></div>
-          ${!c.found?`<span class="mv-none">non in DB</span>`:c.se.length===0?`<span class="mv-none">nessuna SE</span>`:`<div class="mv-se">${c.se.map(t=>tb(t,true)).join('')}</div>`}
+          ${!c.found?`<span class="mv-none">not in DB</span>`:c.se.length===0?`<span class="mv-none">No super effective move</span>`:`<div class="mv-se">${c.se.map(t=>tb(t,true)).join('')}</div>`}
         </div>`).join('')}
       </div>`;
     }).join('')}
@@ -919,12 +919,12 @@ function renderAnalysis(r){
 
   return`<div>
   <div class="an-sec">
-    <div class="an-ttl">${I.chart} Difesa — tabella debolezze e resistenze</div>
+    <div class="an-ttl">${I.chart} Defence — weakness and resistance matrix</div>
     ${alertsHTML}
     ${matrixHTML}
   </div>
   <div class="an-sec">
-    <div class="an-ttl">${I.chart} Copertura offensiva — super efficacia delle mosse</div>
+    <div class="an-ttl">${I.chart} Offensive coverage — super effective moves</div>
     ${covSec}
   </div>
 </div>`;
@@ -936,37 +936,37 @@ function renderGyms(r,g){
   const earned=(r.gyms||[]).filter(x=>x.earned).length;
   const gymCard=(gym,i,isE4)=>{
     const rg=isE4?(r.e4teams||[])[i]||{team:[]}:(r.gyms||[])[i]||{earned:false,team:[]};
-    const {cap,dyn}=isE4?{cap:null,dyn:false}:getGymCap(gym,rg);
+    const {cap,dyn}=getGymCap(gym,rg);
     const c=TC[gym.type||gym.type]||'#888';
     const name=isE4?gym.name:gym.leader;
-    const city=isE4?'Elite Four / Campione':gym.city;
+    const city=isE4?'Pokémon League':gym.city;
     const hasTeam=rg.team&&rg.team.length>0;
     return`<div class="gymc${!isE4&&rg.earned?' earned':''}">
       <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
         <div style="width:30px;height:30px;border-radius:50%;background:${c}22;border:1.5px solid ${c}55;display:flex;align-items:center;justify-content:center;flex-shrink:0">${I.badge}</div>
         <div><div class="gym-ln">${name}</div><div class="gym-ct">${city}</div></div>
-        <button class="boss-team-btn${hasTeam?' enabled':''}" ${hasTeam?'':'disabled'} data-a="view-boss-team" data-gi="${i}" data-e4="${isE4?1:0}" title="Visualizza team" style="margin-left:auto">${I.pokeball}</button>
+        <button class="boss-team-btn${hasTeam?' enabled':''}" ${hasTeam?'':'disabled'} data-a="view-boss-team" data-gi="${i}" data-e4="${isE4?1:0}" title="View team" style="margin-left:auto">${I.pokeball}</button>
       </div>
       <div class="gym-info">
         ${(gym.type&&gym.type!=='Mixed')?tb(gym.type,true):`<span style="font-size:11px;color:var(--t2);font-weight:700">Mixed</span>`}
-        ${!isE4?`<span class="gym-cap${dyn?' dyn':''}" title="${dyn?'Calcolato dal team':'Default gioco'}">Cap Lv.${cap}${dyn?' ★':''}</span>`:``}
+        ${cap?`<span class="gym-cap${dyn?' dyn':''}" title="${dyn?'Calcolato dal team':'Default gioco'}">Cap Lv.${cap}${dyn?' ★':''}</span>`:``}
         ${!isE4?`<span style="font-size:9px;color:var(--t3);font-weight:700">${gym.badge}</span>`:''}
       </div>
-      ${!isE4?`<button class="badge-btn${rg.earned?' on':''}" data-a="toggle-badge" data-gi="${i}">${rg.earned?I.check+' Badge ottenuto':I.badge+' Segna badge'}</button>`:''}
+      ${!isE4?`<button class="badge-btn${rg.earned?' on':''}" data-a="toggle-badge" data-gi="${i}">${rg.earned?I.check+' Badge obtained':I.badge+' Award badge'}</button>`:''}
       <div class="gym-team">${rg.team&&rg.team.length?rg.team.map(s=>`<div class="gpoke">
         ${s.sprite?`<img src="${s.sprite}">`:`<div style="width:42px;height:42px;background:var(--bg);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--t3)">?</div>`}
         <div class="gpoke-n">${s.displayName}</div>
         ${s.level?`<div class="gpoke-l">Lv.${s.level}</div>`:''}
         ${s.moves?.filter(Boolean).length?`<div style="display:flex;flex-wrap:wrap;gap:2px;justify-content:center;margin-top:2px">${s.moves.filter(Boolean).map(m=>`<span class="pmv">${m}</span>`).join('')}</div>`:''}
-      </div>`).join(''):`<div class="no-team">Nessun team impostato</div>`}</div>
-      <button class="btn-g btn-sm" style="margin-top:4px" data-a="edit-gym" data-gi="${i}" data-e4="${isE4?1:0}">${I.edit} Modifica team</button>
+      </div>`).join(''):`<div class="no-team">No team set</div>`}</div>
+      <button class="btn-g btn-sm" style="margin-top:4px" data-a="edit-gym" data-gi="${i}" data-e4="${isE4?1:0}">${I.edit} Modify team</button>
     </div>`;
   };
   return`<div>
-  <div class="sh"><span class="sh-t">Palestre</span><span class="sh-c">${earned}/${g.gyms.length} badge</span></div>
+  <div class="sh"><span class="sh-t">Gyms</span><span class="sh-c">${earned}/${g.gyms.length} badge</span></div>
   <div class="gymgrid">${g.gyms.map((gym,i)=>gymCard(gym,i,false)).join('')}</div>
   <hr class="dv">
-  <div class="sh"><span class="sh-t">Elite Four & Campione</span></div>
+  <div class="sh"><span class="sh-t">Elite Four & Champion</span></div>
   <div class="gymgrid">${g.e4.map((e4,i)=>gymCard(e4,i,true)).join('')}</div>
 </div>`;
 }
@@ -995,10 +995,10 @@ function renderNewRunModal(){
   const sortedGens=Object.keys(grps).sort((a,b)=>a-b);
   return`<div class="mb">
   <button class="m-close" data-a="close-modal">${I.x}</button>
-  <div class="m-ttl">${I.plus} Nuova Run</div>
-  <div class="fg"><label>Nome run</label><input id="nr-name" placeholder="Es. Nuzlocke Platino…" value="${ms.name||''}"></div>
-  <div class="fg"><label>Gioco</label><select id="nr-game">
-    <option value="">-- Seleziona gioco --</option>
+  <div class="m-ttl">${I.plus} New run</div>
+  <div class="fg"><label>Run name</label><input id="nr-name" placeholder="Es. Nuzlocke Platinum…" value="${ms.name||''}"></div>
+  <div class="fg"><label>Game</label><select id="nr-game">
+    <option value="">-- Select game --</option>
     ${sortedGens.map(gen=>`<optgroup label="Generazione ${gen}">${grps[gen].map(k=>`<option value="${k}" ${ms.game===k?'selected':''}>${games[k].name}</option>`).join('')}</optgroup>`).join('')}
   </select></div>
   <div class="m-act">
@@ -1015,12 +1015,12 @@ function renderPokeModal(isEdit){
   const noTypes=!S.typesDB.length;
   return`<div class="mb">
   <button class="m-close" data-a="close-modal">${I.x}</button>
-  <div class="m-ttl">${isEdit?I.edit+' Modifica':I.plus+' Aggiungi'} Pokémon
+  <div class="m-ttl">${isEdit?I.edit+' Modify':I.plus+' Add'} Pokémon
     ${ms.fromEncounter?`<span style="font-size:11px;color:var(--t2);font-weight:600;margin-left:4px">· ${ms.area||''}</span>`:''}
   </div>
   
-  <div class="fg"><label>Specie *</label><div class="sbox">
-    <input id="poke-search" placeholder="Cerca Pokémon…" value="${ms.speciesQ||''}" autocomplete="off" data-a="poke-search">
+  <div class="fg"><label>Species *</label><div class="sbox">
+    <input id="poke-search" placeholder="Search Pokémon…" value="${ms.speciesQ||''}" autocomplete="off" data-a="poke-search">
     <div id="poke-sugg" class="sugg" style="display:none"></div>
   </div>
   ${sp?`<div class="pprev">${sp.thumbnail?`<img src="${sp.thumbnail}">`:''}
@@ -1032,45 +1032,45 @@ function renderPokeModal(isEdit){
       ${sp.description?`<div style="font-size:10px;color:var(--t2);margin-top:4px;line-height:1.3;max-width:260px">${sp.description.slice(0,110)}…</div>`:''}
     </div>
   </div>`:''}</div>
-  <div class="fg"><label>Soprannome</label><input id="poke-nick" placeholder="Soprannome (opzionale)" value="${ms.nickname||''}" ></div>
+  <div class="fg"><label>Surname</label><input id="poke-nick" placeholder="Surname (optional)" value="${ms.nickname||''}" ></div>
   <div class="fr">
-    <div class="fg"><label>Livello</label><input id="poke-lv" type="number" min="1" max="100" placeholder="Lv. (opzionale)" value="${ms.level||''}" ></div>
-    <div class="fg"><label>Stato</label><select id="poke-status" data-a="poke-status">
-      <option value="party" ${ms.status==='party'?'selected':''}>Squadra</option>
+    <div class="fg"><label>Level</label><input id="poke-lv" type="number" min="1" max="100" placeholder="Lv. (optional)" value="${ms.level||''}" ></div>
+    <div class="fg"><label>Status</label><select id="poke-status" data-a="poke-status">
+      <option value="party" ${ms.status==='party'?'selected':''}>Team</option>
       <option value="box" ${(ms.status==='box'||(ms.fromEncounter&&!ms.status))?'selected':''}>Box</option>
-      ${isEdit?`<option value="dead" ${ms.status==='dead'?'selected':''}>Morto</option>`:''}
+      ${isEdit?`<option value="dead" ${ms.status==='dead'?'selected':''}>Dead</option>`:''}
     </select></div>
   </div>
-  <div class="fg"><label>Area cattura</label><select id="poke-area">
+  <div class="fg"><label>Capture area</label><select id="poke-area">
     <option value="">-- Area --</option>
     ${(g?g.areas:[]).map(a=>`<option value="${a}" ${ms.area===a?'selected':''} >${a}</option>`).join('')}
   </select></div>
-  ${isEdit&&ms.status==='dead'?`<div class="fg"><label>Area di morte</label><select id="poke-death">
-    <option value="">-- Dove è morto? --</option>
+  ${isEdit&&ms.status==='dead'?`<div class="fg"><label>Death area</label><select id="poke-death">
+    <option value="">-- Where? --</option>
     ${(g?g.areas:[]).map(a=>`<option value="${a}" ${ms.deathArea===a?'selected':''} >${a}</option>`).join('')}
   </select></div>`:''}
   ${gen>=3?`<div class="fr">
-    <div class="fg"><label>Natura</label><select id="poke-nature"><option value="">—</option>
+    <div class="fg"><label>Nature</label><select id="poke-nature"><option value="">—</option>
       ${NATURES.map(n=>{const e=NE[n];return`<option value="${n}" ${ms.nature===n?'selected':''} >${n}${e?` (+${e.u}/-${e.d})`:' (neutro)'}</option>`;}).join('')}
     </select></div>
-    <div class="fg"><label>Abilità</label><select id="poke-ability"><option value="">—</option>
+    <div class="fg"><label>Ability</label><select id="poke-ability"><option value="">—</option>
       ${abs.map(a=>`<option value="${a}" ${ms.ability===a?'selected':''} >${a}</option>`).join('')}
       ${ms.ability&&!abs.includes(ms.ability)?`<option value="${ms.ability}" selected>${ms.ability}</option>`:''}
     </select></div>
   </div>`:''}
-  <div class="fg"><label>Mosse (max 4)</label><div class="mvgrid">
+  <div class="fg"><label>Moves</label><div class="mvgrid">
     ${[0,1,2,3].map(i=>`
       <div class="sbox">
-        <input id="poke-mv${i}" placeholder="Cerca mossa…" value="${(ms.moves||[])[i]||''}" data-a="move-search" data-mi="${i}" autocomplete="off">
+        <input id="poke-mv${i}" placeholder="Search move…" value="${(ms.moves||[])[i]||''}" data-a="move-search" data-mi="${i}" autocomplete="off">
         <div id="move-sugg-${i}" class="sugg" style="display:none"></div>
       </div>
     `).join('')}
   </div></div>
-  <div class="fg"><label>Note</label><textarea id="poke-notes" placeholder="Note libere, strategie, ricordi…" rows="2" style="resize:vertical;min-height:50px">${ms.notes||''}</textarea></div>
+  <div class="fg""><label>Notes</label><textarea id="poke-notes" placeholder="Free notes, strategies, hot memories…" rows="2" style="resize:vertical;min-height:50px; width: 100%;">${ms.notes||''}</textarea></div>
   <div class="m-act">
-    ${isEdit?`<button class="btn btn-d btn-sm" data-a="del-poke" data-pid="${ms.pokeId}" style="margin-right:auto">${I.trash} Elimina</button>`:''}
-    <button class="btn btn-o" data-a="close-modal">Annulla</button>
-    <button class="btn btn-r" data-a="${isEdit?'save-poke':'add-poke-confirm'}">${isEdit?I.check+' Salva':I.plus+' Aggiungi'}</button>
+    ${isEdit?`<button class="btn btn-d btn-sm" data-a="del-poke" data-pid="${ms.pokeId}" style="margin-right:auto">${I.trash} Delete</button>`:''}
+    <button class="btn btn-o" data-a="close-modal">Undo</button>
+    <button class="btn btn-r" data-a="${isEdit?'save-poke':'add-poke-confirm'}">${isEdit?I.check+' Save':I.plus+' Add'}</button>
   </div>
 </div>`;
 }
@@ -1085,7 +1085,7 @@ function renderGymModal(){
   return`<div class="mb wide">
   <button class="m-close" data-a="close-modal">${I.x}</button>
   <div class="m-ttl">${I.badge} Team — ${title}</div>
-  ${!ms.isE4&&cap?`<p style="font-size:12px;color:var(--t2);margin-bottom:12px">Cap attuale: <strong style="color:var(--amber)">Lv.${cap}</strong>${dyn?' (dal max livello del team)':' (default gioco)'}</p>`:''}
+  ${!ms.isE4&&cap?`<p style="font-size:12px;color:var(--t2);margin-bottom:12px">Current lv: <strong style="color:var(--amber)">Lv.${cap}</strong>${dyn?' (from max team level)':' (game default)'}</p>`:''}
   <div class="gym-slots">${slots.map((slot,i)=>`<div class="gslot">
     <div class="gslot-prev">
       ${slot.thumbnail||slot.sprite?`<img class="gslot-spr" src="${slot.thumbnail||slot.sprite}">`:`<div style="width:50px;height:50px;background:var(--bd);border-radius:var(--r1);display:flex;align-items:center;justify-content:center;color:var(--t3)">?</div>`}
@@ -1106,11 +1106,11 @@ function renderGymModal(){
         </div>
       `).join('')}
     </div>
-    ${slot.displayName?`<button class="btn-g btn-sm" style="margin-top:4px;width:100%;justify-content:center;font-size:10px" data-a="gym-clear-slot" data-si="${i}">${I.x} Rimuovi</button>`:''}
+    ${slot.displayName?`<button class="btn-g btn-sm" style="margin-top:4px;width:100%;justify-content:center;font-size:10px" data-a="gym-clear-slot" data-si="${i}">${I.x} Remove</button>`:''}
   </div>`).join('')}</div>
   <div class="m-act">
-    <button class="btn btn-o" data-a="close-modal">Annulla</button>
-    <button class="btn btn-r" data-a="save-gym-team">${I.check} Salva Team</button>
+    <button class="btn btn-o" data-a="close-modal">Undo</button>
+    <button class="btn btn-r" data-a="save-gym-team">${I.check} Save team</button>
   </div>
 </div>`;
 }
@@ -1119,15 +1119,15 @@ function renderKoModal(){
   const ms=S.ms;const g=game();
   return`<div class="mb" style="max-width:400px">
   <button class="m-close" data-a="close-modal">${I.x}</button>
-  <div class="m-ttl">${I.skull} Segnare KO</div>
-  <p style="font-size:13px;color:var(--t2);margin-bottom:14px"><strong>${ms.pokeName}</strong> è caduto in battaglia.</p>
-  <div class="fg"><label>Dove è morto?</label><select id="ko-area">
-    <option value="">-- Area (opzionale) --</option>
+  <div class="m-ttl">${I.skull} KO</div>
+  <p style="font-size:13px;color:var(--t2);margin-bottom:14px"><strong>${ms.pokeName}</strong> has fallen in battle.</p>
+  <div class="fg"><label>Where?</label><select id="ko-area">
+    <option value="">-- Area (optional) --</option>
     ${(g?g.areas:[]).map(a=>`<option value="${a}">${a}</option>`).join('')}
   </select></div>
   <div class="m-act">
-    <button class="btn btn-o" data-a="close-modal">Annulla</button>
-    <button class="btn btn-r" data-a="confirm-ko">${I.skull} Conferma</button>
+    <button class="btn btn-o" data-a="close-modal">Undo</button>
+    <button class="btn btn-r" data-a="confirm-ko">${I.skull} Confirm</button>
   </div>
 </div>`;
 }
@@ -1136,16 +1136,16 @@ function renderGameManager(){
   const allGames=getGames();
   return`<div class="mb wide">
     <button class="m-close" data-a="close-modal">${I.x}</button>
-    <div class="m-ttl">Gestisci Giochi</div>
-    <div style="margin-bottom:14px"><button class="btn btn-r btn-sm" data-a="new-game">${I.plus} Nuovo Gioco</button></div>
+    <div class="m-ttl">Manage games</div>
+    <div style="margin-bottom:14px"><button class="btn btn-r btn-sm" data-a="new-game">${I.plus} New game</button></div>
     <div style="display:flex;flex-direction:column;gap:8px">
       ${Object.entries(allGames).map(([k,g])=>`
         <div style="display:flex;align-items:center;gap:10px;background:var(--bg);padding:10px 12px;border-radius:var(--r1)">
           <div style="flex:1">
             <div style="font-weight:900;font-size:.9rem">${g.name}</div>
-            <div style="font-size:11px;color:var(--t2)">Gen ${g.gen} · ${g.areas.length} aree · ${g.gyms.length} palestre</div>
+            <div style="font-size:11px;color:var(--t2)">Gen ${g.gen} · ${g.areas.length} areas · ${g.gyms.length} gyms</div>
           </div>
-          <button class="btn-g btn-sm" data-a="edit-game" data-key="${k}">${I.edit} Modifica</button>
+          <button class="btn-g btn-sm" data-a="edit-game" data-key="${k}">${I.edit} Modify</button>
           ${CUSTOM_GAMES[k]?`<button class="btn btn-d btn-sm" data-a="del-game" data-key="${k}">${I.trash}</button>`:''}
         </div>
       `).join('')}
@@ -1159,12 +1159,12 @@ function renderGameEditor(){
   const tab=ms.geTab||'info';
   let body='';
   if(tab==='info'){
-    body=`<div class="fg"><label>Nome Gioco</label><input id="ge-name" value="${ms.name||''}" placeholder="Es. Platinum Renegade"></div>
-    <div class="fg"><label>Generazione</label><select id="ge-gen">
+    body=`<div class="fg"><label>Game name</label><input id="ge-name" value="${ms.name||''}" placeholder="Es. Platinum Renegade"></div>
+    <div class="fg"><label>Generation</label><select id="ge-gen">
       ${[1,2,3,4,5,6,7,8,9].map(g=>`<option value="${g}" ${(ms.gen||4)==g?'selected':''}>Gen ${g}</option>`).join('')}
     </select></div>`;
   }else if(tab==='areas'){
-    body=`<div style="margin-bottom:10px;font-size:12px;color:var(--t2)">Ordina e modifica le aree disponibili.</div>
+    body=`<div style="margin-bottom:10px;font-size:12px;color:var(--t2)">Order and modify areas.</div>
     <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px">
       ${(ms.areas||[]).map((a,i)=>`
         <div style="display:flex;gap:6px;align-items:center">
@@ -1175,9 +1175,9 @@ function renderGameEditor(){
         </div>
       `).join('')}
     </div>
-    <button class="btn btn-o btn-sm" data-a="ge-area-add">${I.plus} Aggiungi Area</button>`;
+    <button class="btn btn-o btn-sm" data-a="ge-area-add">${I.plus} Add Area</button>`;
   }else if(tab==='gyms'){
-    body=`<div style="margin-bottom:10px;font-size:12px;color:var(--t2)">Aggiungi palestre nell'ordine di gioco.</div>
+    body=`<div style="margin-bottom:10px;font-size:12px;color:var(--t2)">Add palestre nell'ordine di gioco.</div>
     <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">
       ${(ms.gyms||[]).map((g,i)=>`
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 70px 32px;gap:6px;align-items:center">
@@ -1190,9 +1190,9 @@ function renderGameEditor(){
         </div>
       `).join('')}
     </div>
-    <button class="btn btn-o btn-sm" data-a="ge-gym-add">${I.plus} Aggiungi Palestra</button>`;
+    <button class="btn btn-o btn-sm" data-a="ge-gym-add">${I.plus} Add Palestra</button>`;
   }else if(tab==='e4'){
-    body=`<div style="margin-bottom:10px;font-size:12px;color:var(--t2)">Elite Four e Campione.</div>
+    body=`<div style="margin-bottom:10px;font-size:12px;color:var(--t2)">Elite Four and Champion.</div>
     <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">
       ${(ms.e4||[]).map((e,i)=>`
         <div style="display:grid;grid-template-columns:1fr 1fr 32px;gap:6px;align-items:center">
@@ -1202,14 +1202,14 @@ function renderGameEditor(){
         </div>
       `).join('')}
     </div>
-    <button class="btn btn-o btn-sm" data-a="ge-e4-add">${I.plus} Aggiungi E4</button>`;
+    <button class="btn btn-o btn-sm" data-a="ge-e4-add">${I.plus} Add Elite 4</button>`;
   }
   return`<div class="mb wide">
     <button class="m-close" data-a="close-modal">${I.x}</button>
-    <div class="m-ttl">${isNew?I.plus+' Nuovo Gioco':I.edit+' Modifica Gioco'}</div>
+    <div class="m-ttl">${isNew?I.plus+' New game':I.edit+' Modify game'}</div>
     <div class="stabs" style="padding:0;margin-bottom:14px">
       <button class="stab ${tab==='info'?'on':''}" data-a="ge-tab" data-t="info">Info</button>
-      <button class="stab ${tab==='areas'?'on':''}" data-a="ge-tab" data-t="areas">Aree (${(ms.areas||[]).length})</button>
+      <button class="stab ${tab==='areas'?'on':''}" data-a="ge-tab" data-t="areas">Areas (${(ms.areas||[]).length})</button>
       <button class="stab ${tab==='gyms'?'on':''}" data-a="ge-tab" data-t="gyms">Gyms</button>
       <button class="stab ${tab==='e4'?'on':''}" data-a="ge-tab" data-t="e4">E4</button>
     </div>
@@ -1234,7 +1234,7 @@ function renderTeamViewer(){
         <div class="tv-badge" style="background:${c}22;border:1.5px solid ${c}66">${I.badge}</div>
         <div>
           <div class="tv-name">${name}</div>
-          <div class="tv-sub">${isE4?'Elite Four / Campione':gym.city} ${gym.type&&gym.type!=='Mixed'?'· '+gym.type:''}</div>
+          <div class="tv-sub">${isE4?'Pokémon League':gym.city} ${gym.type&&gym.type!=='Mixed'?'· '+gym.type:''}</div>
         </div>
       </div>
       <div class="tv-team">${team.map(s=>`<div class="tv-poke">
@@ -1250,10 +1250,10 @@ function renderTeamViewer(){
   return`<div class="mb wide" style="max-width:760px">
   <button class="m-close" data-a="close-modal">${I.x}</button>
   <div class="m-ttl">${I.pokeball} Team Boss — ${r.name}</div>
-  ${gymCards?`<div class="tv-section"><div class="tv-title">Palestre</div>${gymCards}</div>`:''}
-  ${e4Cards?`<div class="tv-section"><div class="tv-title">Elite Four & Campione</div>${e4Cards}</div>`:''}
-  ${!gymCards&&!e4Cards?`<p class="tv-empty" style="padding:20px 0">Nessun team ancora impostato.</p>`:''}
-  <div class="m-act"><button class="btn btn-o" data-a="close-modal">Chiudi</button></div>
+  ${gymCards?`<div class="tv-section"><div class="tv-title">Gyms</div>${gymCards}</div>`:''}
+  ${e4Cards?`<div class="tv-section"><div class="tv-title">Elite Four & Champion</div>${e4Cards}</div>`:''}
+  ${!gymCards&&!e4Cards?`<p class="tv-empty" style="padding:20px 0">No team set.</p>`:''}
+  <div class="m-act"><button class="btn btn-o" data-a="close-modal">Close</button></div>
 </div>`;
 }
 
@@ -1266,7 +1266,7 @@ function renderBossTeamView(){
   const rg=isE4?(r.e4teams||[])[gi]||{team:[]}:(r.gyms||[])[gi]||{team:[]};
   const team=rg.team||[];
   const name=isE4?gymDef?.name:gymDef?.leader;
-  const city=isE4?'Elite Four / Campione':gymDef?.city;
+  const city=isE4?'Elite Four / Champion':gymDef?.city;
   const type=gymDef?.type||'';
   const c=TC[type]||'#888';
 
@@ -1275,7 +1275,7 @@ function renderBossTeamView(){
   <div class="btv-header">
     <div class="btv-badge-circle" style="background:${c}22;border:2px solid ${c}66">${I.pokeball}</div>
     <div>
-      <div class="btv-leader-name">${name||'Allenatore'}</div>
+      <div class="btv-leader-name">${name||'Trainer'}</div>
       <div class="btv-leader-sub">${city}${type&&type!=='Mixed'?' · '+type:''}</div>
     </div>
     ${type&&type!=='Mixed'?`<div style="margin-left:auto">${tb(type,true)}</div>`:''}
@@ -1305,7 +1305,7 @@ document.addEventListener('click',async e=>{
 
   if(a==='new-run'){S.modal={type:'new-run'};S.ms={};render();setTimeout(()=>document.getElementById('nr-name')?.focus(),50);}
   else if(a==='open-run'){S.runId=el.dataset.rid;S.view='tracker';S.tab='routes';render();}
-  else if(a==='del-run'){e.stopPropagation();const rid=el.dataset.rid;const r=S.runs.find(x=>x.id===rid);if(r&&confirm(`Eliminare "${r.name}"?`)){S.runs=S.runs.filter(x=>x.id!==rid);sv();render();}}
+  else if(a==='del-run'){e.stopPropagation();const rid=el.dataset.rid;const r=S.runs.find(x=>x.id===rid);if(r&&confirm(`Delete "${r.name}"?`)){S.runs=S.runs.filter(x=>x.id!==rid);sv();render();}}
   else if(a==='create-run'){
     const name=document.getElementById('nr-name')?.value.trim();
     const gameKey=document.getElementById('nr-game')?.value;
@@ -1352,7 +1352,7 @@ document.addEventListener('click',async e=>{
   }
   else if(a==='del-game'){
     const key=el.dataset.key;
-    if(confirm(`Eliminare il gioco personalizzato "${CUSTOM_GAMES[key]?.name}"?`)){
+    if(confirm(`Delete custmon game "${CUSTOM_GAMES[key]?.name}"?`)){
       delete CUSTOM_GAMES[key];saveCustomGames();render();
     }
   }
@@ -1416,13 +1416,13 @@ document.addEventListener('click',async e=>{
   else if(a==='add-poke-confirm'){commitPoke(false);}
   else if(a==='save-poke'){commitPoke(true);}
   else if(a==='del-poke'){
-    if(!confirm('Eliminare questo Pokémon?'))return;
+    if(!confirm('Delete this Pokémon?'))return;
     const r=run();r.pokemon=r.pokemon.filter(p=>p.id!==el.dataset.pid);sv();S.modal=null;S.ms={};render();
   }
   else if(a==='poke-box'){const r=run();const p=r.pokemon.find(x=>x.id===el.dataset.pid);if(p){p.status='box';sv();render();}}
   else if(a==='poke-party'){
     const r=run();const p=r.pokemon.find(x=>x.id===el.dataset.pid);
-    if((r.pokemon||[]).filter(x=>x.status==='party').length>=6){alert('Squadra al completo (6/6).');return;}
+    if((r.pokemon||[]).filter(x=>x.status==='party').length>=6){alert('Team full (6/6).');return;}
     if(p){p.status='party';sv();render();}
   }
   else if(a==='poke-ko'){
@@ -1543,7 +1543,7 @@ document.addEventListener('input',e=>{
       const div=document.getElementById('poke-sugg');
       if(div){
         if(res.length){div.style.display='block';div.innerHTML=suggHTML(res,'sel-species');}
-        else{div.style.display=el.value.length>=2?'block':'none';div.innerHTML=S.pokedexDB.length?'<div class="sug" style="color:var(--t3);cursor:default;font-style:italic">Nessun risultato</div>':'<div class="sug" style="color:var(--t3);cursor:default;font-style:italic">Nessun risultato</div>';}
+        else{div.style.display=el.value.length>=2?'block':'none';div.innerHTML=S.pokedexDB.length?'<div class="sug" style="color:var(--t3);cursor:default;font-style:italic">Nessun risultato</div>':'<div class="sug" style="color:var(--t3);cursor:default;font-style:italic">No result</div>';}
       }
     },150);
   }
@@ -1555,7 +1555,7 @@ document.addEventListener('input',e=>{
       const div=document.getElementById(`gss-${si}`);
       if(div){
         if(res.length){div.style.display='block';div.innerHTML=suggHTML(res,'gym-sel-species',`data-si="${si}"`);}
-        else{div.style.display=el.value.length>=2?'block':'none';div.innerHTML='<div class="sug" style="color:var(--t3);cursor:default;font-style:italic">Nessun risultato</div>';}
+        else{div.style.display=el.value.length>=2?'block':'none';div.innerHTML='<div class="sug" style="color:var(--t3);cursor:default;font-style:italic">No result</div>';}
       }
     },150);
   }
@@ -1567,7 +1567,7 @@ document.addEventListener('input',e=>{
       const div=document.getElementById(`move-sugg-${mi}`);
       if(div){
         if(res.length){div.style.display='block';div.innerHTML=moveSuggHTML(res,mi);}
-        else{div.style.display=el.value.length>=2?'block':'none';div.innerHTML='<div class="sug" style="color:var(--t3);cursor:default;font-style:italic">Nessun risultato</div>';}
+        else{div.style.display=el.value.length>=2?'block':'none';div.innerHTML='<div class="sug" style="color:var(--t3);cursor:default;font-style:italic">No result</div>';}
       }
     },150);
   }
@@ -1579,7 +1579,7 @@ document.addEventListener('input',e=>{
       const div=document.getElementById(`gym-move-sugg-${si}-${mi}`);
       if(div){
         if(res.length){div.style.display='block';div.innerHTML=moveSuggHTML(res,null,si,mi);}
-        else{div.style.display=el.value.length>=2?'block':'none';div.innerHTML='<div class="sug" style="color:var(--t3);cursor:default;font-style:italic">Nessun risultato</div>';}
+        else{div.style.display=el.value.length>=2?'block':'none';div.innerHTML='<div class="sug" style="color:var(--t3);cursor:default;font-style:italic">No result</div>';}
       }
     },150);
   }
@@ -1604,7 +1604,7 @@ document.addEventListener('input',e=>{
         S.setupStatus=S.setupStatus||{};
         S.setupStatus[type]=true;
         
-      }catch(err){alert('JSON non valido: '+type)}
+      }catch(err){alert('JSON invalid: '+type)}
     };
     reader.readAsText(file);
     e.target.value='';
@@ -1620,15 +1620,15 @@ if(importInput){
     reader.onload=evt=>{
       try{
         const data=JSON.parse(evt.target.result);
-        if(!data.id||!data.name||!data.game){alert('File non valido: non è un salvataggio Nuzlocke.Log');return;}
+        if(!data.id||!data.name||!data.game){alert('File invalid: it is not a Nuzlocke.Log file');return;}
         const existing=S.runs.find(r=>r.id===data.id);
         if(existing){
-          if(!confirm(`Esiste già una run "${existing.name}". Sovrascrivere?`))return;
+          if(!confirm(`Run "${existing.name}" already exists. Do you want to ovewrite?`))return;
           S.runs=S.runs.filter(r=>r.id!==data.id);
         }
         S.runs.push(data);sv();render();
-        alert(`Run "${data.name}" importata con successo!`);
-      }catch(err){alert('Errore nel file di import: JSON non valido');}
+        alert(`Run "${data.name}" import successfull!`);
+      }catch(err){alert('Import error: JSON invalid');}
     };
     reader.readAsText(file);
     e.target.value='';
@@ -1637,10 +1637,10 @@ if(importInput){
 
 function commitPoke(isEdit){
   let sp=S.ms.selectedPoke;
-  if(!sp){alert('Seleziona un Pokémon valido dalla lista.');return false;}
+  if(!sp){alert('Select a valid Pokémon from the list.');return false;}
   const lvStr=(document.getElementById('poke-lv')?.value||'').trim();
   const lv=lvStr?parseInt(lvStr):1;
-  if(lvStr&&(isNaN(lv)||lv<1||lv>100)){alert('Livello non valido (1–100).');return false;}
+  if(lvStr&&(isNaN(lv)||lv<1||lv>100)){alert('Invalid level (1–100).');return false;}
   const nick=document.getElementById('poke-nick')?.value.trim()||'';
   const area=document.getElementById('poke-area')?.value||'';
   const nature=document.getElementById('poke-nature')?.value||'';
@@ -1651,7 +1651,7 @@ function commitPoke(isEdit){
   let status=document.getElementById('poke-status')?.value||'party';
   const partyCount = r.pokemon.filter(x=>x.status==='party').length;
   if(!isEdit && status==='party' && partyCount>=6){
-    alert('Squadra al completo (6/6). Il Pokémon sarà aggiunto al Box.');
+    alert('Full team (6/6). Pokémon added to your Box.');
     status='box';
   }
 
@@ -1669,9 +1669,8 @@ function commitPoke(isEdit){
       if(!r.encounters[S.ms.area])r.encounters[S.ms.area]={};
       r.encounters[S.ms.area].pokeId=p.id;
     }
-    // Se NON è da un incontro, chiedi se aggiungere in squadra
     if(!S.ms.fromEncounter&&status==='box'&&r.pokemon.filter(x=>x.status==='party').length<6){
-      if(confirm(`${p.nickname||p.speciesName} aggiunto al Box. Aggiungi anche in squadra?`))p.status='party';
+      if(confirm(`${p.nickname||p.speciesName} added to your Box. Add it to your team?`))p.status='party';
     }
   }
   sv();S.modal=null;S.ms={};render();return true;
